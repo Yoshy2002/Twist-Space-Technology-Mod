@@ -359,29 +359,29 @@ public class TST_StarcoreMiner extends GTCM_MultiMachineBase<TST_StarcoreMiner> 
     protected void initDropMap() {
         this.dropMap = new VoidMinerUtility.DropMap();
         this.extraDropMap = new VoidMinerUtility.DropMap();
-        int id = this.getBaseMetaTileEntity()
-            .getWorld().provider.dimensionId;
-        this.handleModDimDef(id);
-        this.handleExtraDrops(id);
+        String name = this.getBaseMetaTileEntity()
+            .getWorld().provider.getDimensionName();
+        this.handleModDimDef(name);
+        this.handleExtraDrops(name);
         this.totalWeight = dropMap.getTotalWeight() + extraDropMap.getTotalWeight();
     }
 
     /**
      * Gets the DropMap of the dim for the specified dim id
      *
-     * @param id the dim number
+     * @param name the dim number
      */
-    private void handleModDimDef(int id) {
-        if (VoidMinerUtility.dropMapsByDimId.containsKey(id)) {
-            this.dropMap = VoidMinerUtility.dropMapsByDimId.get(id);
+    private void handleModDimDef(String name) {
+        if (VoidMinerUtility.dropMapsByDimName.containsKey(name)) {
+            this.dropMap = VoidMinerUtility.dropMapsByDimName.get(name);
         } else {
             String chunkProviderName = ((ChunkProviderServer) this.getBaseMetaTileEntity()
                 .getWorld()
                 .getChunkProvider()).currentChunkProvider.getClass()
                     .getName();
 
-            if (VoidMinerUtility.dropMapsByChunkProviderName.containsKey(chunkProviderName)) {
-                this.dropMap = VoidMinerUtility.dropMapsByChunkProviderName.get(chunkProviderName);
+            if (VoidMinerUtility.dropMapsByDimName.containsKey(chunkProviderName)) {
+                this.dropMap = VoidMinerUtility.dropMapsByDimName.get(chunkProviderName);
             }
         }
     }
@@ -391,9 +391,9 @@ public class TST_StarcoreMiner extends GTCM_MultiMachineBase<TST_StarcoreMiner> 
      *
      * @param id the specified dim id
      */
-    private void handleExtraDrops(int id) {
-        if (VoidMinerUtility.extraDropsDimMap.containsKey(id)) {
-            extraDropMap = VoidMinerUtility.extraDropsDimMap.get(id);
+    private void handleExtraDrops(String name) {
+        if (VoidMinerUtility.extraDropsByDimName.containsKey(name)) {
+            extraDropMap = VoidMinerUtility.extraDropsByDimName.get(name);
         }
     }
 

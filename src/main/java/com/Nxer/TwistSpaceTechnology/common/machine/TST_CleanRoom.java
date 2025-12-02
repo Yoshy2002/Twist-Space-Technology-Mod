@@ -167,21 +167,18 @@ public class TST_CleanRoom extends TT_MultiMachineBase_EM implements IConstructa
             var b = filterValidMTEs(mOutputHatches);
             var c = filterValidMTEs(mInputBusses);
             var d = filterValidMTEs(mOutputBusses);
-            boolean item_me = canDumpItemToME();
             boolean fluid_me = canDumpFluidToME();
-            if ((a.size() != b.size() && (!item_me)) || (c.size() != d.size() && (!fluid_me))) {
+            if ((a.size() != b.size() || (c.size() != d.size() && (!fluid_me)))) {
                 stopMachine();
             }
             for (int i = 0; i < c.size(); i++) {
                 for (var item : c.get(i).mInventory) {
                     if (item != null) {
-                        if (item_me) {
-                            d.get(0)
-                                .storePartial(item);
-                        } else if (d.get(i)
+
+                        if (d.get(i)
                             .storePartial(item.copy())) {
-                                item.stackSize = 0;
-                            }
+                            item.stackSize = 0;
+                        }
                     }
                 }
             }

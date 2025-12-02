@@ -3,6 +3,7 @@ package com.Nxer.TwistSpaceTechnology.common.modularizedMachine.modularHatches.E
 import static gregtech.common.misc.WirelessNetworkManager.addEUToGlobalEnergyMap;
 
 import java.math.BigInteger;
+import java.util.Collections;
 import java.util.List;
 import java.util.UUID;
 
@@ -21,6 +22,7 @@ import com.Nxer.TwistSpaceTechnology.util.TstUtils;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import gregtech.api.enums.Textures;
+import gregtech.api.interfaces.IOutputBus;
 import gregtech.api.interfaces.ITexture;
 import gregtech.api.interfaces.metatileentity.IMetaTileEntity;
 import gregtech.api.interfaces.tileentity.IGregTechTileEntity;
@@ -30,6 +32,16 @@ import mcp.mobius.waila.api.IWailaConfigHandler;
 import mcp.mobius.waila.api.IWailaDataAccessor;
 
 public class PerfectExecutionCore extends ExecutionCoreBase {
+
+    @Override
+    public List<IOutputBus> getOutputBusses() {
+        return Collections.emptyList();
+    }
+
+    @Override
+    public boolean canDumpItemToME(List<GTUtility.ItemId> outputs) {
+        return false;
+    }
 
     public PerfectExecutionCore(int aID, String aName, String aNameRegional, int aTier) {
         super(aID, aName, aNameRegional, aTier);

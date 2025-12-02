@@ -43,7 +43,6 @@ import goodgenerator.items.GGMaterial;
 import gregtech.api.enums.GTValues;
 import gregtech.api.enums.ItemList;
 import gregtech.api.enums.Materials;
-import gregtech.api.enums.MaterialsUEVplus;
 import gregtech.api.enums.Mods;
 import gregtech.api.enums.OrePrefixes;
 import gregtech.api.objects.ItemData;
@@ -253,7 +252,7 @@ public class MiracleTopRecipePool {
                             if (stackData != null) {
                                 Materials material = stackData.mMaterial.mMaterial;
 
-                                if (material == Materials.StyreneButadieneRubber || material == Materials.Silicone) {
+                                if (material == Materials.StyreneButadieneRubber || material == Materials.Silicon) {
                                     if (usedMaterial == null) {
                                         usedMaterial = material;
                                     } else if (usedMaterial != material) {
@@ -366,13 +365,13 @@ public class MiracleTopRecipePool {
                     if (Material.getMolten(1) != null && targetModifyOreDict.contains(OreDict)) {
                         if (Material == Materials.TengamAttuned) Material = Materials.TengamPurified;
                         inputFluids.add(
-                            Material
-                                .getMolten(OreDict.mMaterialAmount * GTValues.L * aStack.stackSize / GTValues.M * 16));
+                            Material.getMolten(
+                                OreDict.getMaterialAmount() * GTValues.L * aStack.stackSize / GTValues.M * 16));
                         isItemModified = true;
                     } else if (superConductorMaterialList.contains(Material) && OreDict != OrePrefixes.circuit) {
                         inputItems.add(
                             copyAmountUnsafe(
-                                (int) (OreDict.mMaterialAmount * aStack.stackSize * 2 / GTValues.M),
+                                (int) (OreDict.getMaterialAmount() * aStack.stackSize * 2 / GTValues.M),
                                 GTOreDictUnificator.get(OrePrefixes.wireGt16, Material, 1)));
                         isItemModified = true;
                     }
@@ -661,9 +660,9 @@ public class MiracleTopRecipePool {
                 String orePrefixName = innerEntry.getKey();
                 ItemStack aStack = innerEntry.getValue();
 
-                OrePrefixes OreDict = OrePrefixes.valueOf(orePrefixName);
+                OrePrefixes OreDict = OrePrefixes.getOrePrefix(orePrefixName);
 
-                int amount = (int) (OreDict.mMaterialAmount * GTValues.L * aStack.stackSize / GTValues.M);
+                int amount = (int) (OreDict.getMaterialAmount() * GTValues.L * aStack.stackSize / GTValues.M);
                 FluidStack fluidStack = material.getFluidStack(amount);
 
                 if (fluidStack != null) {
@@ -673,7 +672,7 @@ public class MiracleTopRecipePool {
         }
 
         specialMaterialCantAutoModify
-            .put(ItemList.Circuit_Parts_Reinforced_Glass_Tube.get(1), Materials.ReinforceGlass.getMolten(288));
+            .put(ItemList.Circuit_Parts_Reinforced_Glass_Tube.get(1), Materials.ReinforcedGlass.getMolten(288));
 
         superConductorMaterialList.add(Materials.SuperconductorMV);
         superConductorMaterialList.add(Materials.SuperconductorHV);
@@ -682,7 +681,7 @@ public class MiracleTopRecipePool {
         superConductorMaterialList.add(Materials.SuperconductorLuV);
         superConductorMaterialList.add(Materials.SuperconductorZPM);
         superConductorMaterialList.add(Materials.SuperconductorUV);
-        superConductorMaterialList.add(Materials.SuperconductorUHV);
+        superConductorMaterialList.add(Materials.UV);
         superConductorMaterialList.add(Materials.SuperconductorUEV);
         superConductorMaterialList.add(Materials.SuperconductorUIV);
         superConductorMaterialList.add(Materials.SuperconductorUMV);
@@ -753,13 +752,13 @@ public class MiracleTopRecipePool {
                 GTCMItemList.IndistinctTentacle.get(64)
             )
             .fluidInputs(
-                MaterialsUEVplus.Time.getMolten(1000 * 114514),
-                MaterialsUEVplus.Space.getMolten(1000 * 114514),
-                MaterialsUEVplus.MagnetohydrodynamicallyConstrainedStarMatter.getMolten(1000 * 114514),
+                Materials.Time.getMolten(1000 * 114514),
+                Materials.Space.getMolten(1000 * 114514),
+                Materials.MHDCSM.getMolten(1000 * 114514),
                 GGMaterial.shirabon.getMolten(1000 * 114514),
-                MaterialsUEVplus.Universium.getMolten(1000 * 114514),
-                MaterialsUEVplus.Eternity.getMolten(1000 * 114514),
-                MaterialsUEVplus.PrimordialMatter.getFluid(1000 * 114514)
+                Materials.Universium.getMolten(1000 * 114514),
+                Materials.Eternity.getMolten(1000 * 114514),
+                Materials.PrimordialMatter.getFluid(1000 * 114514)
             )
             .itemOutputs(GTCMItemList.ProofOfHeroes.get(1))
             .specialValue(13500)
@@ -776,7 +775,7 @@ public class MiracleTopRecipePool {
                 GregtechItemList.InfinityInfusedShieldingCore.get(0),
                 ItemList.Optical_Cpu_Containment_Housing.get(1),
                 Materials.Glowstone.getNanite(4))
-            .fluidInputs(MaterialsUEVplus.Space.getMolten(36), MaterialsUEVplus.Time.getMolten(36))
+            .fluidInputs(Materials.Space.getMolten(36), Materials.Time.getMolten(36))
             .itemOutputs(GTCMItemList.ParticleTrapTimeSpaceShield.get(1))
             .eut(RECIPE_UMV)
             .duration(20 * 64)
@@ -789,11 +788,11 @@ public class MiracleTopRecipePool {
                 ItemList.Optical_Cpu_Containment_Housing.get(2),
                 Materials.Glowstone.getNanite(4))
             .fluidInputs(
-                MaterialsUEVplus.Space.getMolten(144),
-                MaterialsUEVplus.Time.getMolten(144),
-                MaterialsUEVplus.SpaceTime.getMolten(288))
+                Materials.Space.getMolten(144),
+                Materials.Time.getMolten(144),
+                Materials.SpaceTime.getMolten(288))
             .itemOutputs(GTCMItemList.ParticleTrapTimeSpaceShield.get(16))
-            .fluidOutputs(MaterialsUEVplus.DimensionallyTranscendentResidue.getFluid(2500))
+            .fluidOutputs(Materials.DTR.getFluid(2500))
             .eut(RECIPE_UMV)
             .duration(20 * 64)
             .addTo(MT);
@@ -847,9 +846,9 @@ public class MiracleTopRecipePool {
                 setStackSize(Materials.Coal.getDust(1), 10_000_000),
                 setStackSize(Materials.NaquadahAlloy.getDust(1), 10_000_000),
                 setStackSize(Materials.Tungsten.getDust(1), 10_000_000),
-                setStackSize(MaterialsUEVplus.TranscendentMetal.getDust(1), 10_000_000),
+                setStackSize(Materials.TranscendentMetal.getDust(1), 10_000_000),
                 setStackSize(Materials.Perlite.getDust(1), 10_000_000),
-                setStackSize(Materials.DarkAsh.getDust(1), 10_000_000),
+                setStackSize(Materials.AshDark.getDust(1), 10_000_000),
                 setStackSize(Materials.GraniticMineralSand.getDust(1), 10_000_000),
                 setStackSize(MaterialsElements.STANDALONE.CELESTIAL_TUNGSTEN.getDust(1), 10_000_000)
             )
@@ -887,12 +886,12 @@ public class MiracleTopRecipePool {
                 setStackSize(Materials.Silver.getNanite(1), 1_000),
                 setStackSize(Materials.Gold.getNanite(1), 1_000),
                 setStackSize(Materials.Neutronium.getNanite(1), 1_000),
-                setStackSize(MaterialsUEVplus.Universium.getNanite(1), 1_000),
-                setStackSize(MaterialsUEVplus.Eternity.getNanite(1), 1_000),
-                setStackSize(MaterialsUEVplus.TranscendentMetal.getNanite(1), 1_000),
+                setStackSize(Materials.Universium.getNanite(1), 1_000),
+                setStackSize(Materials.Eternity.getNanite(1), 1_000),
+                setStackSize(Materials.TranscendentMetal.getNanite(1), 1_000),
                 setStackSize(Materials.Glowstone.getNanite(1), 1_000),
-                setStackSize(MaterialsUEVplus.WhiteDwarfMatter.getNanite(1), 1_000),
-                setStackSize(MaterialsUEVplus.BlackDwarfMatter.getNanite(1), 1_000)
+                setStackSize(Materials.WhiteDwarfMatter.getNanite(1), 1_000),
+                setStackSize(Materials.BlackDwarfMatter.getNanite(1), 1_000)
             )
             .fluidInputs(
                 MaterialPool.LiquidStargate.getFluidOrGas(50_000),
@@ -933,13 +932,13 @@ public class MiracleTopRecipePool {
             GTValues.RA.stdBuilder()
                 .itemInputs(
                     GTUtility.getIntegratedCircuit(12),
-                    GTOreDictUnificator.get(OrePrefixes.foil, MaterialsUEVplus.TranscendentMetal, 4),
-                    GTOreDictUnificator.get(OrePrefixes.foil, MaterialsUEVplus.Universium, 2),
+                    GTOreDictUnificator.get(OrePrefixes.foil, Materials.TranscendentMetal, 4),
+                    GTOreDictUnificator.get(OrePrefixes.foil, Materials.Universium, 2),
                     inStack[i],
                     GTCMItemList.HighDimensionalExtend.get(1)
                 )
                 .fluidInputs(
-                    MaterialsUEVplus.Time.getMolten(144)
+                    Materials.Time.getMolten(144)
                 )
                 .itemOutputs(
                     outStack[i]
@@ -1151,7 +1150,7 @@ public class MiracleTopRecipePool {
                 setStackSize(ItemList.Emitter_UHV.get(1), ITEMS_FLASK_COUNT),
                 setStackSize(ItemList.Sensor_UHV.get(1), ITEMS_FLASK_COUNT),
                 setStackSize(ItemList.Circuit_OpticalAssembly.get(1), ITEMS_FLASK_COUNT),
-                setStackSize(GTOreDictUnificator.get(OrePrefixes.wireGt01, Materials.SuperconductorUHV, 1), ITEMS_FLASK_COUNT)
+                setStackSize(GTOreDictUnificator.get(OrePrefixes.wireGt01, Materials.UV, 1), ITEMS_FLASK_COUNT)
             )
             .fluidInputs(
                 Materials.Samarium.getPlasma(1_000_000_000)

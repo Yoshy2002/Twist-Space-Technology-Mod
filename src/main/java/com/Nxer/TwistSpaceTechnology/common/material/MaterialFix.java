@@ -11,7 +11,6 @@ import net.minecraftforge.fluids.FluidStack;
 import goodgenerator.items.GGMaterial;
 import gregtech.api.enums.GTValues;
 import gregtech.api.enums.Materials;
-import gregtech.api.enums.MaterialsUEVplus;
 import gregtech.api.enums.OrePrefixes;
 import gregtech.api.enums.TierEU;
 import gregtech.api.metatileentity.implementations.MTECable;
@@ -25,9 +24,19 @@ import tectech.recipe.TecTechRecipeMaps;
 
 public class MaterialFix {
 
-    // spotless:off
     public static void load() {
 
+        System.out.println(
+            "[TwistSpace] NeutroniumAlloy: " + MaterialsTST.NeutroniumAlloy.getDust(1)
+                + MaterialsTST.NeutroniumAlloy.getMolten(144)
+                + MaterialsTST.NeutroniumAlloy.getPlasma(144));
+        System.out.println(
+            "[TwistSpace] AxonisAlloy: " + MaterialsTST.AxonisAlloy.getMolten(144)
+                + MaterialsTST.AxonisAlloy.getPlasma(144));
+        System.out.println(
+            "[TwistSpace] Axonium: " + MaterialsTST.Axonium.getMolten(144) + MaterialsTST.Axonium.getPlasma(144));
+        System.out.println(
+            "[TwistSpace] Dubnium: " + MaterialsTST.Dubnium.getMolten(144) + MaterialsTST.Dubnium.getPlasma(144));
         // Holmium Garnet
 
         GTValues.RA.stdBuilder()
@@ -39,8 +48,9 @@ public class MaterialFix {
 
         // Neutronium Alloy
 
-        addBlastRecipe(MaterialsTST.NeutroniumAlloy, (int) TierEU.RECIPE_UIV, 54 * 20, 12500, true,true);
-        addVacuumFreezerRecipe(MaterialsTST.NeutroniumAlloy,(int)TierEU.RECIPE_UEV,18 * 20);
+        addBlastRecipe(MaterialsTST.AxonisAlloy, (int) TierEU.RECIPE_UMV, 720, 13200, true, false);
+        addBlastRecipe(MaterialsTST.NeutroniumAlloy, (int) TierEU.RECIPE_UIV, 54 * 20, 12500, true, true);
+        addVacuumFreezerRecipe(MaterialsTST.NeutroniumAlloy, (int) TierEU.RECIPE_UEV, 18 * 20);
 
         GTValues.RA.stdBuilder()
             .itemInputs(
@@ -49,8 +59,7 @@ public class MaterialFix {
                 Materials.Flerovium.getDust(1),
                 MaterialsElements.STANDALONE.WHITE_METAL.getDust(1),
                 Materials.DarkIron.getDust(1),
-                GTUtility.getIntegratedCircuit(2)
-            )
+                GTUtility.getIntegratedCircuit(2))
             .fluidInputs(Materials.Hydrogen.getPlasma(1000 * 14))
             .itemOutputs(MaterialsTST.NeutroniumAlloy.getDust(12))
             .eut(TierEU.RECIPE_UHV)
@@ -71,19 +80,15 @@ public class MaterialFix {
             .duration(660 * 20)
             .addTo(GTPPRecipeMaps.alloyBlastSmelterRecipes);
 
-        // Axonis Alloy
-
-        addBlastRecipe(MaterialsTST.AxonisAlloy, (int) TierEU.RECIPE_UMV, 720, 13200, true,false);
-
         GTValues.RA.stdBuilder()
             .itemInputs(
                 GTUtility.getIntegratedCircuit(6),
                 MaterialsElements.STANDALONE.DRAGON_METAL.getDust(5),
                 MaterialsElements.STANDALONE.HYPOGEN.getDust(3),
-                MaterialsUEVplus.Creon.getDust(2),
+                Materials.Creon.getDust(2),
                 Materials.Ichorium.getDust(1),
                 Materials.Terbium.getDust(1),
-                GGMaterial.shirabon.get(OrePrefixes.dust,1))
+                GGMaterial.shirabon.get(OrePrefixes.dust, 1))
             .fluidOutputs(MaterialsTST.AxonisAlloy.getMolten(144 * 12))
             .eut(TierEU.RECIPE_UMV)
             .duration(720 * 20)
@@ -91,18 +96,18 @@ public class MaterialFix {
 
         // Axonium
 
-        makeWires(MaterialsTST.Axonium,20000,0L, 0L,Integer.MAX_VALUE, Integer.MAX_VALUE, false, true);
+        makeWires(MaterialsTST.Axonium, 20000, 0L, 0L, Integer.MAX_VALUE, Integer.MAX_VALUE, false, true);
 
         GTValues.RA.stdBuilder()
             .itemInputs(GTUtility.getIntegratedCircuit(20))
             .fluidInputs(
-                new FluidStack( MaterialsElements.STANDALONE.DRAGON_METAL.getPlasma(),5000),
-                new FluidStack( MaterialsElements.STANDALONE.HYPOGEN.getPlasma(),3000),
-                MaterialsUEVplus.Creon.getPlasma(2000),
+                new FluidStack(MaterialsElements.STANDALONE.DRAGON_METAL.getPlasma(), 5000),
+                new FluidStack(MaterialsElements.STANDALONE.HYPOGEN.getPlasma(), 3000),
+                Materials.Creon.getPlasma(2000),
                 Materials.Ichorium.getPlasma(1000),
                 Materials.Terbium.getPlasma(1000),
                 GGMaterial.shirabon.getMolten(1000),
-                MaterialsUEVplus.PrimordialMatter.getFluid(1000))
+                Materials.PrimordialMatter.getFluid(1000))
             .fluidOutputs(MaterialsTST.Axonium.getPlasma(120000))
             .eut(TierEU.RECIPE_MAX)
             .duration(45 * 20)
@@ -118,17 +123,18 @@ public class MaterialFix {
         addGodForgePlasmaRecipes(MaterialsTST.Axonium, 25 * 20, false, 2);
         addGodForgePlasmaRecipes(MaterialsTST.Dubnium, 7 * 20, true, 1);
 
-
     }
 
-    // spotless:on
     public static void addBlastRecipe(Materials aMaterial, int EUt, int duration, int level, boolean gas,
         boolean isHot) {
+
         ItemStack input = aMaterial.getDust(1);
         ItemStack output = isHot ? GTOreDictUnificator.get(OrePrefixes.ingotHot, aMaterial, 1) : aMaterial.getIngots(1);
+        ItemStack ic = gas ? GTUtility.getIntegratedCircuit(11) : GTUtility.getIntegratedCircuit(1);
+
         if (gas) {
             GTValues.RA.stdBuilder()
-                .itemInputs(input, GTUtility.getIntegratedCircuit(11))
+                .itemInputs(input, ic)
                 .fluidInputs(Materials.Helium.getGas(1000))
                 .itemOutputs(output)
                 .eut(EUt)
@@ -137,13 +143,14 @@ public class MaterialFix {
                 .addTo(RecipeMaps.blastFurnaceRecipes);
         } else {
             GTValues.RA.stdBuilder()
-                .itemInputs(input, GTUtility.getIntegratedCircuit(1))
+                .itemInputs(input, ic)
                 .itemOutputs(output)
                 .eut(EUt)
                 .duration(duration * TICKS)
                 .metadata(COIL_HEAT, level)
                 .addTo(RecipeMaps.blastFurnaceRecipes);
         }
+
     }
 
     public static void addVacuumFreezerRecipe(Materials aMaterial, FluidStack[] fluidIn, FluidStack[] fluidOut, int eut,

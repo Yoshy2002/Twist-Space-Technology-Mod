@@ -179,7 +179,7 @@ public class MaterialPool implements Runnable {
     // Bartworks' Material System run on Runnable.class
     @Override
     public void run() {
-        for (var prefix : OrePrefixes.values()) {
+        for (var prefix : OrePrefixes.VALUES) {
             gf.addPrefix(prefix);
         }
         gf.removePrefix(OrePrefixes.ore);

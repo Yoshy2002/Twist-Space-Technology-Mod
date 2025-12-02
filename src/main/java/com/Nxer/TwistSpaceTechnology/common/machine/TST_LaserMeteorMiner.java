@@ -36,6 +36,7 @@ import com.Nxer.TwistSpaceTechnology.common.entity.TileEntityLaserBeacon;
 import com.Nxer.TwistSpaceTechnology.util.TstUtils;
 import com.gtnewhorizon.structurelib.alignment.IAlignmentLimits;
 import com.gtnewhorizon.structurelib.alignment.constructable.ISurvivalConstructable;
+import com.gtnewhorizon.structurelib.alignment.enumerable.ExtendedFacing;
 import com.gtnewhorizon.structurelib.structure.IStructureDefinition;
 import com.gtnewhorizon.structurelib.structure.ISurvivalBuildEnvironment;
 import com.gtnewhorizon.structurelib.structure.StructureDefinition;
@@ -473,7 +474,8 @@ public class TST_LaserMeteorMiner extends MTEEnhancedMultiBlockBase<TST_LaserMet
                 getBaseMetaTileEntity().getYCoord() + (this.multiTier == 1 ? 10 : 15),
                 zStart) instanceof TileEntityLaserBeacon laser) {
             renderer = laser;
-            renderer.setRotationFields(getDirection(), getRotation(), getFlip());
+            ExtendedFacing facing = ExtendedFacing.of(getDirection(), getRotation(), getFlip());
+            renderer.setRotationFields(facing);
             return true;
         }
         return false;

@@ -323,7 +323,9 @@ public class OP_NormalProcessing {
 
         if (isRich) {
             for (ItemStack out : outputs) {
-                out.stackSize *= 2;
+                if (out != null) {
+                    out.stackSize *= 2;
+                }
             }
         }
 

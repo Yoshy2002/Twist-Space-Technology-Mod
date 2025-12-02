@@ -402,8 +402,9 @@ public class TST_EyeOfWood extends GTCM_MultiMachineBase<TST_EyeOfWood> {
             // override to use overworld dimension data.
             dimensionId = 0;
         }
-        handleModDimDef(dimensionId);
-        handleExtraDrops(dimensionId);
+        String dimensionName = worldProvider.getDimensionName();
+        handleModDimDef(dimensionName);
+        handleExtraDrops(dimensionName);
         totalWeight = dropMap.getTotalWeight() + extraDropMap.getTotalWeight();
 
         if (totalWeight <= 0) {
@@ -433,19 +434,19 @@ public class TST_EyeOfWood extends GTCM_MultiMachineBase<TST_EyeOfWood> {
     /**
      * Gets the DropMap of the dim for the specified dim id
      *
-     * @param id the dim number
+     * @param name the dim number
      */
-    private void handleModDimDef(int id) {
-        if (VoidMinerUtility.dropMapsByDimId.containsKey(id)) {
-            dropMap = VoidMinerUtility.dropMapsByDimId.get(id);
+    private void handleModDimDef(String name) {
+        if (VoidMinerUtility.dropMapsByDimName.containsKey(name)) {
+            dropMap = VoidMinerUtility.dropMapsByDimName.get(name);
         } else {
             String chunkProviderName = ((ChunkProviderServer) this.getBaseMetaTileEntity()
                 .getWorld()
                 .getChunkProvider()).currentChunkProvider.getClass()
                     .getName();
 
-            if (VoidMinerUtility.dropMapsByChunkProviderName.containsKey(chunkProviderName)) {
-                dropMap = VoidMinerUtility.dropMapsByChunkProviderName.get(chunkProviderName);
+            if (VoidMinerUtility.dropMapsByDimName.containsKey(chunkProviderName)) {
+                dropMap = VoidMinerUtility.dropMapsByDimName.get(chunkProviderName);
             }
         }
     }
@@ -453,11 +454,11 @@ public class TST_EyeOfWood extends GTCM_MultiMachineBase<TST_EyeOfWood> {
     /**
      * Handles the ores added manually with {@link VoidMinerUtility#addMaterialToDimensionList}
      *
-     * @param id the specified dim id
+     * @param name the specified dim id
      */
-    private void handleExtraDrops(int id) {
-        if (VoidMinerUtility.extraDropsDimMap.containsKey(id)) {
-            extraDropMap = VoidMinerUtility.extraDropsDimMap.get(id);
+    private void handleExtraDrops(String name) {
+        if (VoidMinerUtility.extraDropsByDimName.containsKey(name)) {
+            extraDropMap = VoidMinerUtility.extraDropsByDimName.get(name);
         }
     }
 

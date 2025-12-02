@@ -49,6 +49,11 @@ public class TST_LargeSteamAlloySmelter extends TST_SteamMultiMachineBase<TST_La
         return new TST_LargeSteamAlloySmelter(this.mName);
     }
 
+    @Override
+    public int getThemeTier() {
+        return -1;
+    }
+
     // endregion
 
     // region Processing Logic

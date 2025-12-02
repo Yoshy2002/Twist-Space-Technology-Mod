@@ -17,6 +17,7 @@ import com.Nxer.TwistSpaceTechnology.common.item.ItemYamato;
 import com.Nxer.TwistSpaceTechnology.common.machine.TST_BigBroArray;
 import com.Nxer.TwistSpaceTechnology.common.machine.singleBlock.hatch.GT_Hatch_RackComputationMonitor;
 import com.Nxer.TwistSpaceTechnology.common.material.MaterialFix;
+import com.Nxer.TwistSpaceTechnology.common.material.MaterialsTST;
 import com.Nxer.TwistSpaceTechnology.common.recipeMap.recipeResult.ResultInsufficientTier;
 import com.Nxer.TwistSpaceTechnology.config.Config;
 import com.Nxer.TwistSpaceTechnology.event.ServerEvent;
@@ -57,6 +58,7 @@ public class CommonProxy {
         }
         TwistSpaceTechnology.LOG.info(Tags.MODNAME + " at version " + Tags.VERSION);
 
+        MaterialsTST.init();
         MaterialLoader.load();
 
         if (Config.activateCombatStats) {

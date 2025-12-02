@@ -25,8 +25,6 @@ import goodgenerator.items.GGMaterial;
 import gregtech.api.enums.GTValues;
 import gregtech.api.enums.ItemList;
 import gregtech.api.enums.Materials;
-import gregtech.api.enums.MaterialsGTNH;
-import gregtech.api.enums.MaterialsKevlar;
 import gregtech.api.enums.OrePrefixes;
 import gregtech.api.recipe.RecipeMap;
 import gregtech.api.util.GTModHandler;
@@ -175,7 +173,7 @@ public class IntensifyChemicalDistorterRecipePool {
             .addTo(ICD);
         // endregion
 
-        // region Silicone
+        // region Silicon
         GTValues.RA.stdBuilder()
             .itemInputs(
                 GTUtility.getIntegratedCircuit(11),
@@ -184,7 +182,7 @@ public class IntensifyChemicalDistorterRecipePool {
                 Materials.Carbon.getDust(6))
             .fluidInputs(Materials.Hydrogen.getGas(12000), Materials.Water.getFluid(3000))
 
-            .fluidOutputs(Materials.Silicone.getMolten(1296))
+            .fluidOutputs(Materials.Silicon.getMolten(1296))
             .specialValue(400)
             .eut(96)
             .duration(128)
@@ -199,7 +197,7 @@ public class IntensifyChemicalDistorterRecipePool {
                 GTUtility.copyAmountUnsafe(64 * 6, Materials.Carbon.getDust(1))
             )
             .fluidInputs(Materials.Hydrogen.getGas(12000 * 64), Materials.Water.getFluid(3000 * 64))
-            .fluidOutputs(Materials.Silicone.getMolten(1296 * 64))
+            .fluidOutputs(Materials.Silicon.getMolten(1296 * 64))
             .specialValue(800)
             .eut(96)
             .duration(128 * 64)
@@ -293,7 +291,7 @@ public class IntensifyChemicalDistorterRecipePool {
                 Materials.Hydrogen.getGas(1000 * 5292),
                 Materials.Chlorine.getGas(1000 * 87),
                 Materials.Nitrogen.getGas(1000 * 450))
-            .fluidOutputs(MaterialsKevlar.PolyurethaneResin.getFluid(1000 * 45))
+            .fluidOutputs(Materials.PolyurethaneResin.getFluid(1000 * 45))
             .specialValue(11700)
             .eut(RECIPE_UIV)
             .duration(20 * 64)
@@ -1015,7 +1013,7 @@ public class IntensifyChemicalDistorterRecipePool {
             .builder()
             .itemInputs(
                 setStackSize(GTOreDictUnificator.get(OrePrefixes.frameGt, Materials.Strontium, 1), 0),
-                GTOreDictUnificator.get(OrePrefixes.shard, MaterialsGTNH.Prismarine, 8),
+                GTOreDictUnificator.get(OrePrefixes.shard, Materials.Prismarine, 8),
                 Materials.Carbon.getDust(24),
                 Materials.CrystallineAlloy.getDust(4)
             )

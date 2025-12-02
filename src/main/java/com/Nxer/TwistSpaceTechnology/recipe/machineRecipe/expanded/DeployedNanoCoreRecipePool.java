@@ -38,8 +38,12 @@ public class DeployedNanoCoreRecipePool {
                         ArrayList<FluidStack> InputFluids = new ArrayList<>();
                         ArrayList<ItemStack> OutputItems = new ArrayList<>();
 
-                        if (aRecipe.mInputs != null) for (ItemStack aStack : aRecipe.mInputs) {
-                            InputItems.add(copyAmount(aStack.stackSize * Multiplier, aStack));
+                        if (aRecipe.mInputs != null) {
+                            for (ItemStack aStack : aRecipe.mInputs) {
+                                if (aStack != null) {
+                                    InputItems.add(copyAmount(aStack.stackSize * Multiplier, aStack));
+                                }
+                            }
                         }
 
                         if (aRecipe.mFluidInputs != null) for (FluidStack aStack : aRecipe.mFluidInputs) {
@@ -56,7 +60,7 @@ public class DeployedNanoCoreRecipePool {
 
                         if (aRecipe.mOutputs != null) {
                             for (ItemStack aStack : aRecipe.mOutputs) {
-                                if (null != aStack) {
+                                if (aStack != null) {
                                     OutputItems.add(copyAmount(aStack.stackSize * Multiplier, aStack));
                                 }
                             }

@@ -622,7 +622,7 @@ public class GTCMMachineRecipes {
             .fluidInputs(
                 Materials.Time.getMolten(144 * 64),
                 Materials.Space.getMolten(144 * 64),
-                Materials.MagnetohydrodynamicallyConstrainedStarMatter.getMolten(144 * 64),
+                Materials.MHDCSM.getMolten(144 * 64),
                 Materials.SuperconductorUMVBase.getMolten(128 * 144),
                 Materials.SuperconductorUIVBase.getMolten(256 * 144),
                 Materials.SuperconductorUEVBase.getMolten(512 * 144),
@@ -653,7 +653,7 @@ public class GTCMMachineRecipes {
                 Materials.Universium.getMolten(144 * 64),
                 Materials.Eternity.getMolten(144 * 64),
                 Materials.PrimordialMatter.getFluid(144 * 64),
-                Materials.MagnetohydrodynamicallyConstrainedStarMatter.getMolten(144 * 64 * 8),
+                Materials.MHDCSM.getMolten(144 * 64 * 8),
                 Materials.Time.getMolten(144 * 64 * 8),
                 Materials.Space.getMolten(144 * 64 * 8))
 
@@ -1944,7 +1944,7 @@ public class GTCMMachineRecipes {
                 tectech.thing.CustomItemList.eM_Power.get(64),
                 GTOreDictUnificator.get(OrePrefixes.wireGt16, Materials.SpaceTime, 64),
                 GTOreDictUnificator.get(OrePrefixes.plateDense, Materials.Eternity, 32),
-                GTOreDictUnificator.get(OrePrefixes.plateDense, Materials.MagnetohydrodynamicallyConstrainedStarMatter, 16),
+                GTOreDictUnificator.get(OrePrefixes.plateDense, Materials.MHDCSM, 16),
 
                 getCircuits(Materials.UXV, 16),
                 ItemList.EnergisedTesseract.get(1)
@@ -1973,7 +1973,7 @@ public class GTCMMachineRecipes {
                 HomoStructureMain.get(64),
                 GTOreDictUnificator.get(OrePrefixes.wireGt16, Materials.SpaceTime, 64),
                 GTOreDictUnificator.get(OrePrefixes.plateDense, Materials.Eternity, 32),
-                GTOreDictUnificator.get(OrePrefixes.plateDense, Materials.MagnetohydrodynamicallyConstrainedStarMatter, 16),
+                GTOreDictUnificator.get(OrePrefixes.plateDense, Materials.MHDCSM, 16),
 
                 getCircuits(Materials.MAX, 16),
                 ItemList.EnergisedTesseract.get(64)
@@ -2012,7 +2012,7 @@ public class GTCMMachineRecipes {
                     GTUtility.copyAmountUnsafe(4096, GTOreDictUnificator.get(OrePrefixes.plateDense, Materials.Eternity, 1))
                 )
                 .fluidInputs(
-                    Materials.MagnetohydrodynamicallyConstrainedStarMatter.getMolten(144 * 256),
+                    Materials.MHDCSM.getMolten(144 * 256),
                     Materials.UUMatter.getFluid(2000000),
                     Materials.ExcitedDTSC.getFluid(1000000),
                     GGMaterial.shirabon.getMolten(144 * 8192),
@@ -2412,7 +2412,7 @@ public class GTCMMachineRecipes {
                 .metadata(RESEARCH_ITEM, GregtechItemList.Casing_Coil_QuantumForceTransformer.get(1))
                 .metadata(SCANNING, scanningLV(24 * HOURS))
                 .itemInputs(
-                    GTOreDictUnificator.get(OrePrefixes.frameGt, Materials.Longasssuperconductornameforuhvwire, 64),
+                    GTOreDictUnificator.get(OrePrefixes.frameGt, Materials.SuperconductorUHVBase, 64),
                     GregtechItemList.Casing_Coil_QuantumForceTransformer.get(4),
                     ItemRefer.Compact_Fusion_Coil_T4.get(16),
                     LaserSmartNode.get(16),
@@ -2793,7 +2793,7 @@ public class GTCMMachineRecipes {
                     MaterialsAlloy.NICHROME.getCable16(1)
                 )
                 .fluidInputs(
-                    Materials.Silicone.getMolten(2304)
+                    Materials.RubberSilicone.getMolten(2304)
                 )
                 .itemOutputs(GTCMItemList.LightningSpire.get(1))
                 .eut(RECIPE_IV)
@@ -2874,7 +2874,7 @@ public class GTCMMachineRecipes {
                 .fluidInputs(
                     Materials.UUMatter.getFluid(1000 * 64),
                     new FluidStack(celestialTungsten, 1000 * 16),
-                    Materials.Longasssuperconductornameforuhvwire.getMolten(144 * 8),
+                    Materials.SuperconductorUHVBase.getMolten(144 * 8),
                     GGMaterial.enrichedNaquadahAlloy.getMolten(144 * 2)
                 )
                 .itemOutputs(CompactCyclotronCoil.get(1))
@@ -3009,7 +3009,7 @@ public class GTCMMachineRecipes {
                     GTOreDictUnificator.get(OrePrefixes.plateSuperdense, Materials.CosmicNeutronium, 1),
                     GTOreDictUnificator.get(OrePrefixes.plateSuperdense, Materials.Bedrockium, 1),
                     GTOreDictUnificator.get(OrePrefixes.plateSuperdense, Materials.NaquadahAlloy, 1),
-                    GTOreDictUnificator.get(OrePrefixes.plateSuperdense, Materials.Tetranaquadahdiindiumhexaplatiumosminid, 1),
+                    GTOreDictUnificator.get(OrePrefixes.plateSuperdense, Materials.SuperconductorZPMBase, 1),
 
                     ExtraUtilitiesNodeUpgrade2,
                     ExtraUtilitiesNodeUpgrade2,
@@ -3130,7 +3130,7 @@ public class GTCMMachineRecipes {
                         AdvancedHighPowerCoilBlock.get(64)
                     )
                     .fluidInputs(
-                        Materials.DimensionallyTranscendentResidue.getFluid(2_000_000_000),
+                        Materials.DTR.getFluid(2_000_000_000),
                         Materials.Eternity.getMolten(144 * 524288),
                         GGMaterial.shirabon.getMolten(144 * 524288),
                         Materials.SpaceTime.getMolten(144 * 2097152)
@@ -3166,7 +3166,7 @@ public class GTCMMachineRecipes {
                 TST_RecipeBuilder
                     .builder()
                     .itemInputs(
-                        GTOreDictUnificator.get(OrePrefixes.frameGt, Materials.MagnetohydrodynamicallyConstrainedStarMatter, 64),
+                        GTOreDictUnificator.get(OrePrefixes.frameGt, Materials.MHDCSM, 64),
                         GTCMItemList.PerfectExecutionCore.get(1),
                         GTCMItemList.IndistinctTentacle.get(16),
                         AdvancedHighPowerCoilBlock.get(64),

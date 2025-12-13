@@ -35,7 +35,7 @@ public class MicroSpaceTimeFabricatorioRecipePool {
                 Materials.ExcitedDTSC.getFluid(1000),
                 MaterialsElements.STANDALONE.ASTRAL_TITANIUM.getFluidStack(144 * 64))
             .itemOutputs(GTUtility.copyAmountUnsafe(512, ItemList.Tesseract.get(1)))
-            .fluidOutputs(Materials.DimensionallyTranscendentResidue.getFluid(3000))
+            .fluidOutputs(Materials.DTR.getFluid(3000))
             .eut(RECIPE_UXV)
             .duration(20 * 60)
             .addTo(GTCMRecipe.MicroSpaceTimeFabricatorioRecipes);
@@ -51,7 +51,7 @@ public class MicroSpaceTimeFabricatorioRecipePool {
                 GTCMItemList.Antimatter.get(1))
             .fluidInputs(Materials.Hydrogen.getPlasma(1000))
             .itemOutputs(Laser_Lens_Special.get(64))
-            .fluidOutputs(Materials.DimensionallyTranscendentResidue.getFluid(500))
+            .fluidOutputs(Materials.DTR.getFluid(500))
             .eut(RECIPE_UIV)
             .duration(20 * 60)
             .addTo(GTCMRecipe.MicroSpaceTimeFabricatorioRecipes);

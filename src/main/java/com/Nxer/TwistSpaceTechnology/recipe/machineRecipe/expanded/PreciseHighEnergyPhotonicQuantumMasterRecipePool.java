@@ -97,7 +97,7 @@ public class PreciseHighEnergyPhotonicQuantumMasterRecipePool {
                 GTUtility.getIntegratedCircuit(13))
             .fluidInputs(
                 Materials.PrimordialMatter.getFluid(144 * 16),
-                Materials.MagnetohydrodynamicallyConstrainedStarMatter.getMolten(144 * 64),
+                Materials.MHDCSM.getMolten(144 * 64),
                 Materials.Time.getMolten(144 * 32),
                 Materials.Space.getMolten(144 * 32))
             .itemOutputs(SpaceWarper.get(128))

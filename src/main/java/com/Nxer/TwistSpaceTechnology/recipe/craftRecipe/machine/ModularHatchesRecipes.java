@@ -46,7 +46,7 @@ public class ModularHatchesRecipes {
 
         Materials[] materials = new Materials[] { Materials.NaquadahAlloy, Materials.Neutronium,
             Materials.CosmicNeutronium, Materials.Infinity, Materials.TranscendentMetal,
-            Materials.SpaceTime, Materials.MagnetohydrodynamicallyConstrainedStarMatter,
+            Materials.SpaceTime, Materials.MHDCSM,
             Materials.MagMatter };
 
         ItemStack[] hulls = new ItemStack[] { ItemList.Hull_ZPM.get(1), ItemList.Hull_UV.get(1),
@@ -185,7 +185,7 @@ public class ModularHatchesRecipes {
                     Materials.Universium.getNanite(64),
                     Materials.Universium.getNanite(64))
                 .fluidInputs(
-                    Materials.MagnetohydrodynamicallyConstrainedStarMatter.getMolten(144 * 64 * 64 * 6),
+                    Materials.MHDCSM.getMolten(144 * 64 * 64 * 6),
                     Materials.Universium.getMolten(144 * 64 * 64 * 12),
                     Materials.Eternity.getMolten(144 * 64 * 64 * 24),
                     Materials.SpaceTime.getMolten(144 * 64 * 64))

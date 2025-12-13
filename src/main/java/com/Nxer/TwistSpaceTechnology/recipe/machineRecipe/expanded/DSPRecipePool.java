@@ -506,7 +506,7 @@ public class DSPRecipePool {
                 ItemList.Field_Generator_UXV.get(4),
                 ItemList.Emitter_UXV.get(4))
             .fluidInputs(
-                Materials.MagnetohydrodynamicallyConstrainedStarMatter.getMolten(144 * 32),
+                Materials.MHDCSM.getMolten(144 * 32),
                 Materials.Universium.getMolten(144 * 128))
             .itemOutputs(DysonSphereFrameComponent.get(27))
 
@@ -568,7 +568,7 @@ public class DSPRecipePool {
                 ItemList.Emitter_UXV.get(2))
             .fluidInputs(
                 Materials.SiliconSG.getMolten(144 * 8192),
-                Materials.MagnetohydrodynamicallyConstrainedStarMatter.getMolten(144 * 8),
+                Materials.MHDCSM.getMolten(144 * 8),
                 Materials.Universium.getMolten(144 * 8))
             .itemOutputs(SolarSail.get(128))
 
@@ -623,7 +623,7 @@ public class DSPRecipePool {
                 GTUtility.copyAmountUnsafe(0, Materials.Universium.getNanite(1)),
                 GTUtility.copyAmountUnsafe(0, Materials.Eternity.getNanite(1)),
                 GTOreDictUnificator
-                    .get(OrePrefixes.frameGt, Materials.MagnetohydrodynamicallyConstrainedStarMatter, 1),
+                    .get(OrePrefixes.frameGt, Materials.MHDCSM, 1),
 
                 SpaceWarper.get(4),
                 ParticleTrapTimeSpaceShield.get(8),
@@ -654,12 +654,12 @@ public class DSPRecipePool {
                 GTOreDictUnificator.get(OrePrefixes.circuit, Materials.UXV, 2),
                 ItemList.EnergisedTesseract.get(1))
             .fluidInputs(
-                Materials.MagnetohydrodynamicallyConstrainedStarMatter.getMolten(144 * 8),
+                Materials.MHDCSM.getMolten(144 * 8),
                 Materials.Universium.getMolten(144 * 64),
                 Materials.PrimordialMatter.getFluid(144 * 24),
                 Materials.Eternity.getMolten(144 * 24))
             .itemOutputs(AnnihilationConstrainer.get(128))
-            .fluidOutputs(Materials.DimensionallyTranscendentResidue.getFluid(200_000))
+            .fluidOutputs(Materials.DTR.getFluid(200_000))
             .eut(RECIPE_MAX)
             .duration(20 * 60)
             .addTo(GTCMRecipe.MiracleTopRecipes);
@@ -709,7 +709,7 @@ public class DSPRecipePool {
                 ItemList.Timepiece.get(1),
                 StellarConstructionFrameMaterial.get(64),
                 GTOreDictUnificator
-                    .get(OrePrefixes.foil, Materials.MagnetohydrodynamicallyConstrainedStarMatter, 6))
+                    .get(OrePrefixes.foil, Materials.MHDCSM, 6))
             .fluidInputs(Materials.Hydrogen.getPlasma(1000 * 128))
             .itemOutputs(AntimatterFuelRod.get(64))
             .specialValue(3)
@@ -877,7 +877,7 @@ public class DSPRecipePool {
                     // general input , amount is set by machine internal parameters
                     Materials.Hydrogen.getPlasma(256 * 1000),
                     // T3 maintenance fluid with basic amount
-                    Materials.MagnetohydrodynamicallyConstrainedStarMatter.getMolten(16))
+                    Materials.MHDCSM.getMolten(16))
                 .itemOutputs(
                     // first output is T1 output
                     appendToItemStackDisplayName(
@@ -1196,7 +1196,7 @@ public class DSPRecipePool {
 
                 GravitationalLens.get(32),
                 Laser_Lens_Special.get(16),
-                Materials.MagnetohydrodynamicallyConstrainedStarMatter.getPlates(16),
+                Materials.MHDCSM.getPlates(16),
 
                 Materials.Eternity.getNanite(1),
                 Materials.Universium.getNanite(1))
@@ -1217,7 +1217,7 @@ public class DSPRecipePool {
                 GravitationalLens.get(6),
                 Laser_Lens_Special.get(6),
                 Materials.Void.getPlates(64))
-            .fluidInputs(Materials.MagnetohydrodynamicallyConstrainedStarMatter.getMolten(144 * 8))
+            .fluidInputs(Materials.MHDCSM.getMolten(144 * 8))
             .itemOutputs(GTCMItemList.MatterRecombinator.get(1))
             .eut(RECIPE_MAX)
             .duration(20 * 300)

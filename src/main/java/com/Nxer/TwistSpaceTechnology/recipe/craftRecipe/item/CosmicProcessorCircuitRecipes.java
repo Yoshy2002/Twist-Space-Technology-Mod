@@ -227,7 +227,7 @@ public class CosmicProcessorCircuitRecipes {
                 GTOreDictUnificator.get(OrePrefixes.foil, Materials.Infinity, 2))
             .fluidInputs(
                 Materials.Time.getMolten(72),
-                Materials.DimensionallyTranscendentResidue.getFluid(100))
+                Materials.DTR.getFluid(100))
             .itemOutputs(GTCMItemList.EnergyFluctuationSelfHarmonizer.get(1))
             .outputChances(9000)
             .eut(RECIPE_UMV)
@@ -243,7 +243,7 @@ public class CosmicProcessorCircuitRecipes {
                 GTOreDictUnificator.get(OrePrefixes.foil, Materials.Infinity, 2))
             .fluidInputs(
                 Materials.Time.getMolten(36),
-                Materials.DimensionallyTranscendentResidue.getFluid(50))
+                Materials.DTR.getFluid(50))
             .itemOutputs(GTCMItemList.EnergyFluctuationSelfHarmonizer.get(1))
             .eut(RECIPE_UMV)
             .duration(20 * 120)
@@ -258,7 +258,7 @@ public class CosmicProcessorCircuitRecipes {
                 GTOreDictUnificator.get(OrePrefixes.foil, Materials.Infinity, 2))
             .fluidInputs(
                 Materials.Time.getMolten(36),
-                Materials.DimensionallyTranscendentResidue.getFluid(50))
+                Materials.DTR.getFluid(50))
             .itemOutputs(
                 GTCMItemList.EnergyFluctuationSelfHarmonizer.get(2),
                 GTCMItemList.EnergyFluctuationSelfHarmonizer.get(1))
@@ -286,7 +286,7 @@ public class CosmicProcessorCircuitRecipes {
             .itemOutputs(
                 Circuit_CosmicProcessor.get(1),
                 GTOreDictUnificator.get(OrePrefixes.nugget, Materials.SpaceTime, 3))
-            .fluidOutputs(Materials.DimensionallyTranscendentResidue.getFluid(333))
+            .fluidOutputs(Materials.DTR.getFluid(333))
             .eut(RECIPE_UEV)
             .duration(20 * 50)
             .addTo(GTCMRecipe.MiracleTopRecipes);
@@ -310,7 +310,7 @@ public class CosmicProcessorCircuitRecipes {
             .itemOutputs(
                 ItemList.Circuit_CosmicAssembly.get(1),
                 GTOreDictUnificator.get(OrePrefixes.nugget, Materials.SpaceTime, 3))
-            .fluidOutputs(Materials.DimensionallyTranscendentResidue.getFluid(333))
+            .fluidOutputs(Materials.DTR.getFluid(333))
             .eut(RECIPE_UIV)
             .duration(20 * 100)
             .addTo(GTCMRecipe.MiracleTopRecipes);
@@ -336,7 +336,7 @@ public class CosmicProcessorCircuitRecipes {
             .itemOutputs(
                 ItemList.Circuit_CosmicComputer.get(1),
                 GTOreDictUnificator.get(OrePrefixes.nugget, Materials.SpaceTime, 3))
-            .fluidOutputs(Materials.DimensionallyTranscendentResidue.getFluid(333))
+            .fluidOutputs(Materials.DTR.getFluid(333))
             .eut(RECIPE_UIV)
             .duration(20 * 1000)
             .addTo(GTCMRecipe.MiracleTopRecipes);
@@ -359,7 +359,7 @@ public class CosmicProcessorCircuitRecipes {
                 Materials.Space.getMolten(1152),
                 Materials.Time.getMolten(1152))
             .itemOutputs(ItemList.Circuit_CosmicMainframe.get(1), ItemList.Tesseract.get(2))
-            .fluidOutputs(Materials.DimensionallyTranscendentResidue.getFluid(666))
+            .fluidOutputs(Materials.DTR.getFluid(666))
             .eut(RECIPE_UMV)
             .duration(20 * 1500)
             .addTo(GTCMRecipe.MiracleTopRecipes);
@@ -377,11 +377,11 @@ public class CosmicProcessorCircuitRecipes {
             .fluidInputs(
                 // TODO spacetime glue
                 Materials.Hydrogen.getPlasma(1000),
-                Materials.MagnetohydrodynamicallyConstrainedStarMatter.getMolten(72),
+                Materials.MHDCSM.getMolten(72),
                 Materials.Space.getMolten(1152),
                 Materials.Time.getMolten(1152))
             .itemOutputs(ItemList.Circuit_CosmicMainframe.get(3), ItemList.Tesseract.get(6))
-            .fluidOutputs(Materials.DimensionallyTranscendentResidue.getFluid(666))
+            .fluidOutputs(Materials.DTR.getFluid(666))
             .eut(RECIPE_UMV)
             .duration(20 * 2400)
             .addTo(GTCMRecipe.MiracleTopRecipes);
@@ -395,7 +395,7 @@ public class CosmicProcessorCircuitRecipes {
                 eternal_singularity.copy(),
                 MaterialType.Singularity.stack(1),
                 GGMaterial.shirabon.get(OrePrefixes.stick, 2))
-            .fluidInputs(Materials.DimensionallyTranscendentResidue.getFluid(500))
+            .fluidInputs(Materials.DTR.getFluid(500))
             .itemOutputs(SeedsSpaceTime.get(1))
             .eut(RECIPE_UMV)
             .duration(20 * 60)
@@ -410,7 +410,7 @@ public class CosmicProcessorCircuitRecipes {
                 EnergyFluctuationSelfHarmonizer.get(1),
                 eternal_singularity.copy(),
                 GTOreDictUnificator.get(OrePrefixes.itemCasing, Materials.TranscendentMetal, 3))
-            .fluidInputs(Materials.DimensionallyTranscendentResidue.getFluid(200))
+            .fluidInputs(Materials.DTR.getFluid(200))
             .itemOutputs(EncapsulatedMicroSpaceTimeUnit.get(1), eternal_singularity.copy())
             .outputChances(10000, 4500)
             .eut(RECIPE_UMV)
@@ -425,7 +425,7 @@ public class CosmicProcessorCircuitRecipes {
                 EnergyFluctuationSelfHarmonizer.get(3),
                 copyAmount(2, eternal_singularity),
                 GTOreDictUnificator.get(OrePrefixes.itemCasing, Materials.TranscendentMetal, 9))
-            .fluidInputs(Materials.DimensionallyTranscendentResidue.getFluid(200))
+            .fluidInputs(Materials.DTR.getFluid(200))
             .itemOutputs(EncapsulatedMicroSpaceTimeUnit.get(4))
             .eut(RECIPE_UMV)
             .duration(20 * 90)
@@ -486,7 +486,7 @@ public class CosmicProcessorCircuitRecipes {
                 Materials.Time.getMolten(144),
                 Materials.SpaceTime.getMolten(144 * 2))
             .itemOutputs(GTCMItemList.ParticleTrapTimeSpaceShield.get(64))
-            .fluidOutputs(Materials.DimensionallyTranscendentResidue.getFluid(2500))
+            .fluidOutputs(Materials.DTR.getFluid(2500))
             .eut(TierEU.RECIPE_UMV)
             .duration(20 * 64)
             .addTo(GTCMRecipe.MiracleTopRecipes);

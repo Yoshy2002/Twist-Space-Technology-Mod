@@ -79,7 +79,7 @@ public class TST_DisassemblerRecipeHandler {
                         getModItem(PamsHarvestCraft.ID, "wovencottonItem", 8, 0, missing),
                         GTOreDictUnificator.get(OrePrefixes.foil, Materials.Aluminium, 8),
                         CustomItemList.MeteoricIronString.get(8))
-                    .setOutputFluids(Materials.Silicone.getMolten(144))
+                    .setOutputFluids(Materials.RubberSilicone.getMolten(144))
                     .setEut(256)
                     .setTier(GTUtility.getTier(256)));
 

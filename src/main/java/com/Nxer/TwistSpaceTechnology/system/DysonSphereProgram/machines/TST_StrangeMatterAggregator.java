@@ -145,7 +145,7 @@ public class TST_StrangeMatterAggregator extends ModularizedMachineSupportAllMod
         SpaceTimeMaintenanceConsumablesFluids = new Fluid[] {
             Materials.SpaceTime.getMolten(576).getFluid(),
             Materials.Universium.getMolten(96).getFluid(),
-            Materials.MagnetohydrodynamicallyConstrainedStarMatter.getMolten(16) .getFluid()
+            Materials.MHDCSM.getMolten(16) .getFluid()
         };
 
         ByproductFluids = new Fluid[][] {

@@ -253,7 +253,7 @@ public class MiracleTopRecipePool {
                             if (stackData != null) {
                                 Materials material = stackData.mMaterial.mMaterial;
 
-                                if (material == Materials.StyreneButadieneRubber || material == Materials.Silicone) {
+                                if (material == Materials.StyreneButadieneRubber || material == Materials.RubberSilicone) {
                                     if (usedMaterial == null) {
                                         usedMaterial = material;
                                     } else if (usedMaterial != material) {
@@ -673,7 +673,7 @@ public class MiracleTopRecipePool {
         }
 
         specialMaterialCantAutoModify
-            .put(ItemList.Circuit_Parts_Reinforced_Glass_Tube.get(1), Materials.ReinforceGlass.getMolten(288));
+            .put(ItemList.Circuit_Parts_Reinforced_Glass_Tube.get(1), Materials.ReinforcedGlass.getMolten(288));
 
         superConductorMaterialList.add(Materials.SuperconductorMV);
         superConductorMaterialList.add(Materials.SuperconductorHV);
@@ -755,7 +755,7 @@ public class MiracleTopRecipePool {
             .fluidInputs(
                 Materials.Time.getMolten(1000 * 114514),
                 Materials.Space.getMolten(1000 * 114514),
-                Materials.MagnetohydrodynamicallyConstrainedStarMatter.getMolten(1000 * 114514),
+                Materials.MHDCSM.getMolten(1000 * 114514),
                 GGMaterial.shirabon.getMolten(1000 * 114514),
                 Materials.Universium.getMolten(1000 * 114514),
                 Materials.Eternity.getMolten(1000 * 114514),
@@ -793,7 +793,7 @@ public class MiracleTopRecipePool {
                 Materials.Time.getMolten(144),
                 Materials.SpaceTime.getMolten(288))
             .itemOutputs(GTCMItemList.ParticleTrapTimeSpaceShield.get(16))
-            .fluidOutputs(Materials.DimensionallyTranscendentResidue.getFluid(2500))
+            .fluidOutputs(Materials.DTR.getFluid(2500))
             .eut(RECIPE_UMV)
             .duration(20 * 64)
             .addTo(MT);
@@ -849,7 +849,7 @@ public class MiracleTopRecipePool {
                 setStackSize(Materials.Tungsten.getDust(1), 10_000_000),
                 setStackSize(Materials.TranscendentMetal.getDust(1), 10_000_000),
                 setStackSize(Materials.Perlite.getDust(1), 10_000_000),
-                setStackSize(Materials.DarkAsh.getDust(1), 10_000_000),
+                setStackSize(Materials.AshDark.getDust(1), 10_000_000),
                 setStackSize(Materials.GraniticMineralSand.getDust(1), 10_000_000),
                 setStackSize(MaterialsElements.STANDALONE.CELESTIAL_TUNGSTEN.getDust(1), 10_000_000)
             )

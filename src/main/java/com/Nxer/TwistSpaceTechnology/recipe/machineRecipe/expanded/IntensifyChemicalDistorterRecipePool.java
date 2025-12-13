@@ -184,7 +184,7 @@ public class IntensifyChemicalDistorterRecipePool {
                 Materials.Carbon.getDust(6))
             .fluidInputs(Materials.Hydrogen.getGas(12000), Materials.Water.getFluid(3000))
 
-            .fluidOutputs(Materials.Silicone.getMolten(1296))
+            .fluidOutputs(Materials.RubberSilicone.getMolten(1296))
             .specialValue(400)
             .eut(96)
             .duration(128)
@@ -199,7 +199,7 @@ public class IntensifyChemicalDistorterRecipePool {
                 GTUtility.copyAmountUnsafe(64 * 6, Materials.Carbon.getDust(1))
             )
             .fluidInputs(Materials.Hydrogen.getGas(12000 * 64), Materials.Water.getFluid(3000 * 64))
-            .fluidOutputs(Materials.Silicone.getMolten(1296 * 64))
+            .fluidOutputs(Materials.RubberSilicone.getMolten(1296 * 64))
             .specialValue(800)
             .eut(96)
             .duration(128 * 64)

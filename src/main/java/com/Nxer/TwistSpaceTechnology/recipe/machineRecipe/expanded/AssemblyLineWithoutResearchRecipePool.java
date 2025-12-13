@@ -1102,7 +1102,7 @@ public class AssemblyLineWithoutResearchRecipePool {
                     ItemList.Hull_LuV.get(1),
                     GTOreDictUnificator.get(
                         OrePrefixes.spring,
-                        Materials.Tetraindiumditindibariumtitaniumheptacoppertetrakaidekaoxid,
+                        Materials.SuperconductorLuVBase,
                         2),
                     ItemList.Circuit_Chip_UHPIC.get(2),
                     new Object[] { OrePrefixes.circuit.get(Materials.LuV), 2 },

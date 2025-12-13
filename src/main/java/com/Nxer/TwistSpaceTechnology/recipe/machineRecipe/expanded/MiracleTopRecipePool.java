@@ -682,7 +682,7 @@ public class MiracleTopRecipePool {
         superConductorMaterialList.add(Materials.SuperconductorLuV);
         superConductorMaterialList.add(Materials.SuperconductorZPM);
         superConductorMaterialList.add(Materials.SuperconductorUV);
-        superConductorMaterialList.add(Materials.SuperconductorUHV);
+        superConductorMaterialList.add(Materials.UV);
         superConductorMaterialList.add(Materials.SuperconductorUEV);
         superConductorMaterialList.add(Materials.SuperconductorUIV);
         superConductorMaterialList.add(Materials.SuperconductorUMV);
@@ -1151,7 +1151,7 @@ public class MiracleTopRecipePool {
                 setStackSize(ItemList.Emitter_UHV.get(1), ITEMS_FLASK_COUNT),
                 setStackSize(ItemList.Sensor_UHV.get(1), ITEMS_FLASK_COUNT),
                 setStackSize(ItemList.Circuit_OpticalAssembly.get(1), ITEMS_FLASK_COUNT),
-                setStackSize(GTOreDictUnificator.get(OrePrefixes.wireGt01, Materials.SuperconductorUHV, 1), ITEMS_FLASK_COUNT)
+                setStackSize(GTOreDictUnificator.get(OrePrefixes.wireGt01, Materials.UV, 1), ITEMS_FLASK_COUNT)
             )
             .fluidInputs(
                 Materials.Samarium.getPlasma(1_000_000_000)

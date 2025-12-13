@@ -62,7 +62,7 @@ public class CosmicProcessorCircuitRecipes {
                 ItemList.Circuit_Board_Wetware_Extreme.get(1),
                 GTCMItemList.SiliconBasedNeuron.get(1),
                 GTOreDictUnificator.get(OrePrefixes.foil, Materials.SuperconductorUEVBase, 2))
-            .itemOutputs(GTOreDictUnificator.get(OrePrefixes.circuit, Materials.Infinite, 1))
+            .itemOutputs(GTOreDictUnificator.get(OrePrefixes.circuit, Materials.UHV, 1))
 
             .eut(RECIPE_UMV)
             .duration(20 * 5)
@@ -73,7 +73,7 @@ public class CosmicProcessorCircuitRecipes {
                 ItemList.Circuit_Board_Wetware_Extreme.get(1),
                 GTCMItemList.SiliconBasedNeuron.get(1),
                 GTOreDictUnificator.get(OrePrefixes.foil, Materials.SuperconductorUIVBase, 1))
-            .itemOutputs(GTOreDictUnificator.get(OrePrefixes.circuit, Materials.Infinite, 2))
+            .itemOutputs(GTOreDictUnificator.get(OrePrefixes.circuit, Materials.UHV, 2))
 
             .eut(RECIPE_UMV)
             .duration(20 * 5)

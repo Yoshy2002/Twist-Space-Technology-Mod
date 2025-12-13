@@ -111,7 +111,7 @@ public class MegaSolarPanelFactoryRecipePool {
             Materials.Iron.getPlates(4),
             Materials.Osmium.getPlates(1),
             Materials.Diamond.getDust(48),
-            GTOreDictUnificator.get(OrePrefixes.wireGt01, Materials.SuperconductorUHV, 8))
+            GTOreDictUnificator.get(OrePrefixes.wireGt01, Materials.UV, 8))
         .fluidInputs(
             Materials.SolderingAlloy.getMolten(144*32),
             Materials.Uranium.getMolten(144*64),
@@ -183,7 +183,7 @@ public class MegaSolarPanelFactoryRecipePool {
         .itemInputs(
             NHItemList.IrradiantReinforcedTungstenPlate.getIS(4),
             ItemList.Circuit_Silicon_Wafer7.get(1),
-            GTOreDictUnificator.get(OrePrefixes.wireGt01, Materials.SuperconductorUHV, 8),
+            GTOreDictUnificator.get(OrePrefixes.wireGt01, Materials.UV, 8),
             GTOreDictUnificator.get(OrePrefixes.circuit, Materials.UEV, 4))
         .fluidInputs(
             Materials.VibrantAlloy.getMolten(144*4),
@@ -196,7 +196,7 @@ public class MegaSolarPanelFactoryRecipePool {
         .itemInputs(
             NHItemList.IrradiantReinforcedTungstenSteelPlate.getIS(4),
             ItemList.Circuit_Silicon_Wafer7.get(1),
-            GTOreDictUnificator.get(OrePrefixes.wireGt02, Materials.SuperconductorUHV, 8),
+            GTOreDictUnificator.get(OrePrefixes.wireGt02, Materials.UV, 8),
             GTOreDictUnificator.get(OrePrefixes.circuit, Materials.UEV, 4))
         .fluidInputs(
             Materials.Barium.getMolten(144*2),
@@ -209,7 +209,7 @@ public class MegaSolarPanelFactoryRecipePool {
         .itemInputs(
             NHItemList.IrradiantReinforcedChromePlate.getIS(4),
             ItemList.Circuit_Silicon_Wafer7.get(1),
-            GTOreDictUnificator.get(OrePrefixes.wireGt04, Materials.SuperconductorUHV, 8),
+            GTOreDictUnificator.get(OrePrefixes.wireGt04, Materials.UV, 8),
             GTOreDictUnificator.get(OrePrefixes.circuit, Materials.UEV, 4))
         .fluidInputs(
             Materials.Uranium.getMolten(144*4),

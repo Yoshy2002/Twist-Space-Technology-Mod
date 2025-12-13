@@ -2015,7 +2015,7 @@ public class TST_BigBroArray extends TT_MultiMachineBase_EM implements ISurvival
                 ItemList.Robot_Arm_IV.get(16),
                 ItemList.Emitter_IV.get(16),
                 GTOreDictUnificator.get(OrePrefixes.wireGt01, Materials.SuperconductorIV, 8),
-                GTOreDictUnificator.get(OrePrefixes.circuit, Materials.Elite, 4))
+                GTOreDictUnificator.get(OrePrefixes.circuit, Materials.IV, 4))
             .fluidInputs(Materials.SolderingAlloy.getMolten(9216))
             .itemOutputs(GTCMItemList.ParallelismCasing0.get(1))
 
@@ -2033,7 +2033,7 @@ public class TST_BigBroArray extends TT_MultiMachineBase_EM implements ISurvival
                 ItemList.Robot_Arm_ZPM.get(16),
                 ItemList.Emitter_ZPM.get(16),
                 GTOreDictUnificator.get(OrePrefixes.wireGt01, Materials.SuperconductorZPM, 8),
-                new Object[] { OrePrefixes.circuit.get(Materials.Ultimate), 4 })
+                new Object[] { OrePrefixes.circuit.get(Materials.ZPM), 4 })
             .itemOutputs(GTCMItemList.ParallelismCasing1.get(1))
             .fluidInputs(
                 Materials.SolderingAlloy.getMolten(9216),
@@ -2051,8 +2051,8 @@ public class TST_BigBroArray extends TT_MultiMachineBase_EM implements ISurvival
                 GTCMItemList.ParallelismCasing1.get(4),
                 ItemList.Robot_Arm_UHV.get(16),
                 ItemList.Emitter_UHV.get(16),
-                GTOreDictUnificator.get(OrePrefixes.wireGt01, Materials.SuperconductorUHV, 8),
-                new Object[] { OrePrefixes.circuit.get(Materials.Infinite), 4 })
+                GTOreDictUnificator.get(OrePrefixes.wireGt01, Materials.UV, 8),
+                new Object[] { OrePrefixes.circuit.get(Materials.UHV), 4 })
             .itemOutputs(GTCMItemList.ParallelismCasing2.get(1))
             .fluidInputs(
                 new FluidStack(MaterialsAlloy.INDALLOY_140.getFluid(), 9216),
@@ -2079,7 +2079,7 @@ public class TST_BigBroArray extends TT_MultiMachineBase_EM implements ISurvival
                 GTCMItemList.SolarSail.get(64), ItemList.Casing_FrostProof.get(1),
                 GTCMItemList.ParallelismCasing2.get(16), ItemList.Robot_Arm_UIV.get(16), ItemList.Emitter_UIV.get(16),
                 GTOreDictUnificator.get(OrePrefixes.wireGt01, Materials.SuperconductorUIV, 64),
-                new Object[] { OrePrefixes.circuit.get(Materials.Optical), 8 } },
+                new Object[] { OrePrefixes.circuit.get(Materials.UIV), 8 } },
             new FluidStack[] { new FluidStack(solderUEV, 9216) },
             GTCMItemList.ParallelismCasing3.get(1),
             20 * 1200,

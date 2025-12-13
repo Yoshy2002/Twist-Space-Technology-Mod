@@ -343,7 +343,7 @@ public class AssemblyLineWithoutResearchRecipePool {
                     ItemList.Circuit_Parts_TransistorASMD.get(16),
                     ItemList.Circuit_Parts_DiodeASMD.get(16),
                     ItemList.Circuit_Chip_Ram.get(48),
-                    GTOreDictUnificator.get(OrePrefixes.wireGt01, Materials.SuperconductorUHV, 16),
+                    GTOreDictUnificator.get(OrePrefixes.wireGt01, Materials.UV, 16),
                     GTOreDictUnificator.get(OrePrefixes.foil, Materials.Silicone, 64))
                 .fluidInputs(
                     MaterialsAlloy.INDALLOY_140.getFluidStack(144 * 20),
@@ -364,7 +364,7 @@ public class AssemblyLineWithoutResearchRecipePool {
                     ItemList.Circuit_Parts_TransistorASMD.get(16),
                     ItemList.Circuit_Parts_DiodeASMD.get(16),
                     ItemList.Circuit_Chip_Ram.get(48),
-                    GTOreDictUnificator.get(OrePrefixes.wireGt01, Materials.SuperconductorUHV, 16),
+                    GTOreDictUnificator.get(OrePrefixes.wireGt01, Materials.UV, 16),
                     GTOreDictUnificator.get(OrePrefixes.foil, Materials.StyreneButadieneRubber, 64))
                 .fluidInputs(
                     MaterialsAlloy.INDALLOY_140.getFluidStack(144 * 20),
@@ -385,7 +385,7 @@ public class AssemblyLineWithoutResearchRecipePool {
                     ItemList.Circuit_Parts_TransistorXSMD.get(4),
                     ItemList.Circuit_Parts_DiodeXSMD.get(4),
                     ItemList.Circuit_Chip_Ram.get(48),
-                    GTOreDictUnificator.get(OrePrefixes.wireGt01, Materials.SuperconductorUHV, 16),
+                    GTOreDictUnificator.get(OrePrefixes.wireGt01, Materials.UV, 16),
                     GTOreDictUnificator.get(OrePrefixes.foil, Materials.Silicone, 64))
                 .fluidInputs(
                     MaterialsAlloy.INDALLOY_140.getFluidStack(144 * 20),
@@ -406,7 +406,7 @@ public class AssemblyLineWithoutResearchRecipePool {
                     ItemList.Circuit_Parts_TransistorXSMD.get(4),
                     ItemList.Circuit_Parts_DiodeXSMD.get(4),
                     ItemList.Circuit_Chip_Ram.get(48),
-                    GTOreDictUnificator.get(OrePrefixes.wireGt01, Materials.SuperconductorUHV, 16),
+                    GTOreDictUnificator.get(OrePrefixes.wireGt01, Materials.UV, 16),
                     GTOreDictUnificator.get(OrePrefixes.foil, Materials.StyreneButadieneRubber, 64))
                 .fluidInputs(
                     MaterialsAlloy.INDALLOY_140.getFluidStack(144 * 20),
@@ -600,7 +600,7 @@ public class AssemblyLineWithoutResearchRecipePool {
                     ItemList.Circuit_Parts_CapacitorASMD.get(24),
                     ItemList.Circuit_Parts_DiodeASMD.get(24),
                     ItemList.Circuit_Chip_Ram.get(64),
-                    GTOreDictUnificator.get(OrePrefixes.wireGt01, Materials.SuperconductorUHV, 64),
+                    GTOreDictUnificator.get(OrePrefixes.wireGt01, Materials.UV, 64),
                     GTOreDictUnificator.get(OrePrefixes.foil, Materials.Silicone, 64),
                     GTOreDictUnificator.get(OrePrefixes.foil, Materials.Polybenzimidazole, 64))
                 .fluidInputs(
@@ -622,7 +622,7 @@ public class AssemblyLineWithoutResearchRecipePool {
                     ItemList.Circuit_Parts_CapacitorASMD.get(24),
                     ItemList.Circuit_Parts_DiodeASMD.get(24),
                     ItemList.Circuit_Chip_Ram.get(64),
-                    GTOreDictUnificator.get(OrePrefixes.wireGt01, Materials.SuperconductorUHV, 64),
+                    GTOreDictUnificator.get(OrePrefixes.wireGt01, Materials.UV, 64),
                     GTOreDictUnificator.get(OrePrefixes.foil, Materials.StyreneButadieneRubber, 64),
                     GTOreDictUnificator.get(OrePrefixes.foil, Materials.Polybenzimidazole, 64))
                 .fluidInputs(
@@ -644,7 +644,7 @@ public class AssemblyLineWithoutResearchRecipePool {
                     ItemList.Circuit_Parts_CapacitorXSMD.get(6),
                     ItemList.Circuit_Parts_DiodeXSMD.get(6),
                     ItemList.Circuit_Chip_Ram.get(64),
-                    GTOreDictUnificator.get(OrePrefixes.wireGt01, Materials.SuperconductorUHV, 64),
+                    GTOreDictUnificator.get(OrePrefixes.wireGt01, Materials.UV, 64),
                     GTOreDictUnificator.get(OrePrefixes.foil, Materials.Silicone, 64),
                     GTOreDictUnificator.get(OrePrefixes.foil, Materials.Polybenzimidazole, 64))
                 .fluidInputs(
@@ -666,7 +666,7 @@ public class AssemblyLineWithoutResearchRecipePool {
                     ItemList.Circuit_Parts_CapacitorXSMD.get(6),
                     ItemList.Circuit_Parts_DiodeXSMD.get(6),
                     ItemList.Circuit_Chip_Ram.get(64),
-                    GTOreDictUnificator.get(OrePrefixes.wireGt01, Materials.SuperconductorUHV, 64),
+                    GTOreDictUnificator.get(OrePrefixes.wireGt01, Materials.UV, 64),
                     GTOreDictUnificator.get(OrePrefixes.foil, Materials.StyreneButadieneRubber, 64),
                     GTOreDictUnificator.get(OrePrefixes.foil, Materials.Polybenzimidazole, 64))
                 .fluidInputs(
@@ -916,7 +916,7 @@ public class AssemblyLineWithoutResearchRecipePool {
                 .itemInputs(
                     GTOreDictUnificator.get(OrePrefixes.plateDense, Materials.Neutronium, 64),
                     GTUtility.copyAmountUnsafe(6144, ItemList.Circuit_Parts_Crystal_Chip_Master.get(1)),
-                    GTOreDictUnificator.get(OrePrefixes.circuit, Materials.Bio, 16),
+                    GTOreDictUnificator.get(OrePrefixes.circuit, Materials.UEV, 16),
                     ItemList.Field_Generator_UEV.get(8),
 
                     ItemList.Circuit_Wafer_PPIC.get(64),
@@ -936,7 +936,7 @@ public class AssemblyLineWithoutResearchRecipePool {
                 .itemInputs(
                     GTOreDictUnificator.get(OrePrefixes.plateDense, Materials.Infinity, 64),
                     GTUtility.copyAmountUnsafe(48912, ItemList.Circuit_Parts_Crystal_Chip_Master.get(1)),
-                    GTOreDictUnificator.get(OrePrefixes.circuit, Materials.Optical, 16),
+                    GTOreDictUnificator.get(OrePrefixes.circuit, Materials.UIV, 16),
                     ItemList.Field_Generator_UIV.get(8),
 
                     ItemList.Circuit_Wafer_QPIC.get(64),
@@ -1004,8 +1004,8 @@ public class AssemblyLineWithoutResearchRecipePool {
                     GTOreDictUnificator.get(OrePrefixes.plateDense, Materials.CallistoIce, 1),
                     ItemList.Reactor_Coolant_Sp_6.get(1L),
                     getModItem(GTPlusPlus.ID, "itemScrewLaurenium", 12, 0),
-                    new Object[] { OrePrefixes.circuit.get(Materials.Elite), 2L },
-                    GTOreDictUnificator.get(OrePrefixes.wireGt01, Materials.SuperconductorUHV, 2),
+                    new Object[] { OrePrefixes.circuit.get(Materials.IV), 2L },
+                    GTOreDictUnificator.get(OrePrefixes.wireGt01, Materials.UV, 2),
                     ItemList.Super_Chest_IV.get(1),
                     ItemList.Super_Tank_IV.get(1),
                     getModItem(NewHorizonsCoreMod.ID, "item.PicoWafer", 1, 0))
@@ -1025,7 +1025,7 @@ public class AssemblyLineWithoutResearchRecipePool {
                     GTOreDictUnificator.get(OrePrefixes.plate, Materials.Osmiridium, 6),
                     getModItem(GTPlusPlus.ID, "itemScrewLaurenium", 12, 0),
                     ItemList.Reactor_Coolant_Sp_6.get(1L),
-                    GTOreDictUnificator.get(OrePrefixes.wireGt01, Materials.SuperconductorUHV, 1))
+                    GTOreDictUnificator.get(OrePrefixes.wireGt01, Materials.UV, 1))
                 .fluidInputs(
                     WerkstoffLoader.Oganesson.getFluidOrGas(500),
                     new FluidStack(solderUEV, 288),
@@ -1045,7 +1045,7 @@ public class AssemblyLineWithoutResearchRecipePool {
                     ItemList.Hull_LuV.get(1),
                     GTOreDictUnificator.get(OrePrefixes.wireGt01, Materials.SuperconductorLuV, 2),
                     ItemList.Circuit_Chip_UHPIC.get(2),
-                    new Object[] { OrePrefixes.circuit.get(Materials.Master), 2 },
+                    new Object[] { OrePrefixes.circuit.get(Materials.LuV), 2 },
                     ItemList.LuV_Coil.get(2),
                     ItemList.Electric_Pump_LuV.get(1))
                 .itemOutputs(ItemList.Hatch_Energy_LuV.get(1))
@@ -1059,7 +1059,7 @@ public class AssemblyLineWithoutResearchRecipePool {
                     ItemList.Hull_ZPM.get(1),
                     GTOreDictUnificator.get(OrePrefixes.wireGt02, Materials.SuperconductorZPM, 2),
                     ItemList.Circuit_Chip_NPIC.get(2),
-                    new Object[] { OrePrefixes.circuit.get(Materials.Ultimate), 2 },
+                    new Object[] { OrePrefixes.circuit.get(Materials.ZPM), 2 },
                     ItemList.ZPM_Coil.get(2),
                     ItemList.Electric_Pump_ZPM.get(1))
                 .itemOutputs(ItemList.Hatch_Energy_ZPM.get(1))
@@ -1073,7 +1073,7 @@ public class AssemblyLineWithoutResearchRecipePool {
                     ItemList.Hull_UV.get(1),
                     GTOreDictUnificator.get(OrePrefixes.wireGt02, Materials.SuperconductorUV, 2),
                     ItemList.Circuit_Chip_PPIC.get(2),
-                    new Object[] { OrePrefixes.circuit.get(Materials.SuperconductorUHV), 2 },
+                    new Object[] { OrePrefixes.circuit.get(Materials.UV), 2 },
                     ItemList.UV_Coil.get(2),
                     ItemList.Electric_Pump_UV.get(1))
                 .itemOutputs(ItemList.Hatch_Energy_UV.get(1))
@@ -1085,9 +1085,9 @@ public class AssemblyLineWithoutResearchRecipePool {
             GTValues.RA.stdBuilder()
                 .itemInputs(
                     ItemList.Hull_MAX.get(1L),
-                    GTOreDictUnificator.get(OrePrefixes.wireGt04, Materials.SuperconductorUHV, 2L),
+                    GTOreDictUnificator.get(OrePrefixes.wireGt04, Materials.UV, 2L),
                     ItemList.Circuit_Chip_QPIC.get(2L),
-                    new Object[] { OrePrefixes.circuit.get(Materials.Infinite), 2L },
+                    new Object[] { OrePrefixes.circuit.get(Materials.UHV), 2L },
                     ItemList.UHV_Coil.get(2L),
                     ItemList.Electric_Pump_UHV.get(1L))
                 .itemOutputs(ItemList.Hatch_Energy_UHV.get(1))
@@ -1105,7 +1105,7 @@ public class AssemblyLineWithoutResearchRecipePool {
                         Materials.Tetraindiumditindibariumtitaniumheptacoppertetrakaidekaoxid,
                         2),
                     ItemList.Circuit_Chip_UHPIC.get(2),
-                    new Object[] { OrePrefixes.circuit.get(Materials.Master), 2 },
+                    new Object[] { OrePrefixes.circuit.get(Materials.LuV), 2 },
                     ItemList.LuV_Coil.get(2),
                     ItemList.Electric_Pump_LuV.get(1))
                 .itemOutputs(ItemList.Hatch_Dynamo_LuV.get(1))
@@ -1119,7 +1119,7 @@ public class AssemblyLineWithoutResearchRecipePool {
                     ItemList.Hull_ZPM.get(1),
                     GTOreDictUnificator.get(OrePrefixes.spring, Materials.Tetranaquadahdiindiumhexaplatiumosminid, 4),
                     ItemList.Circuit_Chip_NPIC.get(2),
-                    new Object[] { OrePrefixes.circuit.get(Materials.Ultimate), 2 },
+                    new Object[] { OrePrefixes.circuit.get(Materials.ZPM), 2 },
                     ItemList.ZPM_Coil.get(2),
                     ItemList.Electric_Pump_ZPM.get(1))
                 .itemOutputs(ItemList.Hatch_Dynamo_ZPM.get(1))
@@ -1133,7 +1133,7 @@ public class AssemblyLineWithoutResearchRecipePool {
                     ItemList.Hull_UV.get(1),
                     GTOreDictUnificator.get(OrePrefixes.spring, Materials.Longasssuperconductornameforuvwire, 4),
                     ItemList.Circuit_Chip_PPIC.get(2),
-                    new Object[] { OrePrefixes.circuit.get(Materials.SuperconductorUHV), 2 },
+                    new Object[] { OrePrefixes.circuit.get(Materials.UV), 2 },
                     ItemList.UV_Coil.get(2),
                     ItemList.Electric_Pump_UV.get(1))
                 .itemOutputs(ItemList.Hatch_Dynamo_UV.get(1))
@@ -1147,7 +1147,7 @@ public class AssemblyLineWithoutResearchRecipePool {
                     ItemList.Hull_MAX.get(1L),
                     GTOreDictUnificator.get(OrePrefixes.spring, Materials.Longasssuperconductornameforuhvwire, 8L),
                     ItemList.Circuit_Chip_QPIC.get(2L),
-                    new Object[] { OrePrefixes.circuit.get(Materials.Infinite), 2L },
+                    new Object[] { OrePrefixes.circuit.get(Materials.UHV), 2L },
                     ItemList.UHV_Coil.get(2L),
                     ItemList.Electric_Pump_UHV.get(1L))
                 .itemOutputs(ItemList.Hatch_Dynamo_UHV.get(1))

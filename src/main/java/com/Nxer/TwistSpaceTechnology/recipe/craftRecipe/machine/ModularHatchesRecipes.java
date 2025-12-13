@@ -53,14 +53,14 @@ public class ModularHatchesRecipes {
             ItemList.Hull_MAX.get(1), ItemList.Hull_UEV.get(1), ItemList.Hull_UIV.get(1), ItemList.Hull_UMV.get(1),
             ItemList.Hull_UXV.get(1), ItemList.Hull_MAXV.get(1) };
 
-        ItemStack[] circuits = new ItemStack[] { GTOreDictUnificator.get(OrePrefixes.circuit, Materials.Ultimate, 1),
-            GTOreDictUnificator.get(OrePrefixes.circuit, Materials.SuperconductorUHV, 1),
-            GTOreDictUnificator.get(OrePrefixes.circuit, Materials.Infinite, 1),
-            GTOreDictUnificator.get(OrePrefixes.circuit, Materials.Bio, 1),
-            GTOreDictUnificator.get(OrePrefixes.circuit, Materials.Optical, 1),
+        ItemStack[] circuits = new ItemStack[] { GTOreDictUnificator.get(OrePrefixes.circuit, Materials.ZPM, 1),
+            GTOreDictUnificator.get(OrePrefixes.circuit, Materials.UV, 1),
+            GTOreDictUnificator.get(OrePrefixes.circuit, Materials.UHV, 1),
+            GTOreDictUnificator.get(OrePrefixes.circuit, Materials.UEV, 1),
+            GTOreDictUnificator.get(OrePrefixes.circuit, Materials.UIV, 1),
             GTOreDictUnificator.get(OrePrefixes.circuit, Materials.UMV, 1),
             GTOreDictUnificator.get(OrePrefixes.circuit, Materials.UXV, 1),
-            GTOreDictUnificator.get(OrePrefixes.circuit, Materials.Transcendent, 1), };
+            GTOreDictUnificator.get(OrePrefixes.circuit, Materials.MAX, 1), };
 
         ItemStack[] fieldGenerators = new ItemStack[] { ItemList.Field_Generator_ZPM.get(1),
             ItemList.Field_Generator_UV.get(1), ItemList.Field_Generator_UHV.get(1),
@@ -107,7 +107,7 @@ public class ModularHatchesRecipes {
                     ItemList.Electric_Pump_UV.get(12),
                     ItemList.Field_Generator_UV.get(1),
                     ItemList.Sensor_UV.get(1),
-                    new Object[] { OrePrefixes.circuit.get(Materials.SuperconductorUHV), 2 },
+                    new Object[] { OrePrefixes.circuit.get(Materials.UV), 2 },
 
                     CustomItemList.HighEnergyFlowCircuit.get(36),
                     GTOreDictUnificator.get(OrePrefixes.wireFine, Materials.Infinity, 32),

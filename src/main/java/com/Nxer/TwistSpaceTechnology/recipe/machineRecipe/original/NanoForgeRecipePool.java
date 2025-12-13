@@ -11,7 +11,7 @@ import com.dreammaster.gthandler.CustomItemList;
 import goodgenerator.util.ItemRefer;
 import gregtech.api.enums.GTValues;
 import gregtech.api.enums.Materials;
-import gregtech.api.enums.MaterialsUEVplus;
+import gregtech.api.enums.Materials;
 import gregtech.api.enums.OrePrefixes;
 import gregtech.api.util.GTOreDictUnificator;
 import gtPlusPlus.xmod.gregtech.api.enums.GregtechItemList;
@@ -30,7 +30,7 @@ public class NanoForgeRecipePool {
                 Materials.CosmicNeutronium.getBlocks(16),
                 CustomItemList.PicoWafer.get(8),
                 ItemRefer.HiC_T5.get(1))
-            .fluidInputs(Materials.UUMatter.getFluid(1000000), MaterialsUEVplus.Protomatter.getFluid(2000))
+            .fluidInputs(Materials.UUMatter.getFluid(1000000), Materials.Protomatter.getFluid(2000))
             .itemOutputs(Materials.CosmicNeutronium.getNanite(1))
             .metadata(NANO_FORGE_TIER, 3)
             .eut(RECIPE_MAX)
@@ -48,7 +48,7 @@ public class NanoForgeRecipePool {
                 GTCMItemList.InformationHorizonInterventionShell.get(16))
             .fluidInputs(
                 Materials.UUMatter.getFluid(2000000),
-                MaterialsUEVplus.PhononMedium.getFluid(4000),
+                Materials.PhononMedium.getFluid(4000),
                 Materials.Infinity.getPlasma(8000))
             .itemOutputs(MaterialsTST.Axonium.getNanite(2))
             .metadata(NANO_FORGE_TIER, 3)

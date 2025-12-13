@@ -25,8 +25,8 @@ import goodgenerator.items.GGMaterial;
 import gregtech.api.enums.GTValues;
 import gregtech.api.enums.ItemList;
 import gregtech.api.enums.Materials;
-import gregtech.api.enums.MaterialsGTNH;
-import gregtech.api.enums.MaterialsKevlar;
+import gregtech.api.enums.Materials;
+import gregtech.api.enums.Materials;
 import gregtech.api.enums.OrePrefixes;
 import gregtech.api.recipe.RecipeMap;
 import gregtech.api.util.GTModHandler;
@@ -293,7 +293,7 @@ public class IntensifyChemicalDistorterRecipePool {
                 Materials.Hydrogen.getGas(1000 * 5292),
                 Materials.Chlorine.getGas(1000 * 87),
                 Materials.Nitrogen.getGas(1000 * 450))
-            .fluidOutputs(MaterialsKevlar.PolyurethaneResin.getFluid(1000 * 45))
+            .fluidOutputs(Materials.PolyurethaneResin.getFluid(1000 * 45))
             .specialValue(11700)
             .eut(RECIPE_UIV)
             .duration(20 * 64)
@@ -1015,7 +1015,7 @@ public class IntensifyChemicalDistorterRecipePool {
             .builder()
             .itemInputs(
                 setStackSize(GTOreDictUnificator.get(OrePrefixes.frameGt, Materials.Strontium, 1), 0),
-                GTOreDictUnificator.get(OrePrefixes.shard, MaterialsGTNH.Prismarine, 8),
+                GTOreDictUnificator.get(OrePrefixes.shard, Materials.Prismarine, 8),
                 Materials.Carbon.getDust(24),
                 Materials.CrystallineAlloy.getDust(4)
             )

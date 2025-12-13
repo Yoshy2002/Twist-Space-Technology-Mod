@@ -70,7 +70,7 @@ import goodgenerator.util.ItemRefer;
 import gregtech.api.enums.GTValues;
 import gregtech.api.enums.ItemList;
 import gregtech.api.enums.Materials;
-import gregtech.api.enums.MaterialsUEVplus;
+import gregtech.api.enums.Materials;
 import gregtech.api.enums.OrePrefixes;
 import gregtech.api.enums.TierEU;
 import gregtech.api.objects.ItemData;
@@ -885,7 +885,7 @@ public class AssemblyLineWithoutResearchRecipePool {
                 .fluidInputs(
                     new FluidStack(solderUEV, 144 * 1024),
                     Materials.Lead.getMolten(144 * 16 * 1024),
-                    MaterialsUEVplus.SpaceTime.getMolten(144 * 8),
+                    Materials.SpaceTime.getMolten(144 * 8),
                     Materials.UUMatter.getFluid(1000 * 16))
                 .itemOutputs(GTUtility.copyAmountUnsafe(2048, ItemRefer.Advanced_Radiation_Protection_Plate.get(1)))
                 .eut(RECIPE_UXV)
@@ -944,7 +944,7 @@ public class AssemblyLineWithoutResearchRecipePool {
                     GTOreDictUnificator.get(OrePrefixes.wireGt01, Materials.SuperconductorUIV, 64))
                 .fluidInputs(
                     new FluidStack(solderUEV, 144 * 128),
-                    MaterialsUEVplus.SpaceTime.getMolten(144 * 128),
+                    Materials.SpaceTime.getMolten(144 * 128),
                     Materials.UUMatter.getFluid(1000 * 128))
                 .itemOutputs(ItemList.ZPM4.get(1))
                 .eut(128_000_000)
@@ -964,7 +964,7 @@ public class AssemblyLineWithoutResearchRecipePool {
                     GTOreDictUnificator.get(OrePrefixes.wireGt01, Materials.SuperconductorUMV, 64))
                 .fluidInputs(
                     new FluidStack(solderUEV, 144 * 256),
-                    MaterialsUEVplus.Eternity.getMolten(144 * 256),
+                    Materials.Eternity.getMolten(144 * 256),
                     Materials.UUMatter.getFluid(1000 * 256))
                 .itemOutputs(ItemList.ZPM5.get(1))
                 .eut(512_000_000)
@@ -984,7 +984,7 @@ public class AssemblyLineWithoutResearchRecipePool {
                     GTOreDictUnificator.get(OrePrefixes.wireGt16, Materials.SuperconductorUMV, 64))
                 .fluidInputs(
                     new FluidStack(solderUEV, 144 * 512),
-                    MaterialsUEVplus.MagnetohydrodynamicallyConstrainedStarMatter.getMolten(144 * 128),
+                    Materials.MagnetohydrodynamicallyConstrainedStarMatter.getMolten(144 * 128),
                     Materials.UUMatter.getFluid(1000 * 512))
                 .itemOutputs(ItemList.ZPM6.get(1))
                 .eut(2_048_000_000)
@@ -1234,30 +1234,30 @@ public class AssemblyLineWithoutResearchRecipePool {
             final ItemStack[] plateList = new ItemStack[] {
                 // Dense Shirabon plate.
                 GTOreDictUnificator.get("boltShirabon", 2),
-                GTOreDictUnificator.get(OrePrefixes.bolt, MaterialsUEVplus.WhiteDwarfMatter, 2),
-                GTOreDictUnificator.get(OrePrefixes.bolt, MaterialsUEVplus.WhiteDwarfMatter, 8),
-                GTOreDictUnificator.get(OrePrefixes.bolt, MaterialsUEVplus.WhiteDwarfMatter, 32),
-                GTOreDictUnificator.get(OrePrefixes.bolt, MaterialsUEVplus.BlackDwarfMatter, 2),
-                GTOreDictUnificator.get(OrePrefixes.bolt, MaterialsUEVplus.BlackDwarfMatter, 8),
-                GTOreDictUnificator.get(OrePrefixes.bolt, MaterialsUEVplus.BlackDwarfMatter, 32),
+                GTOreDictUnificator.get(OrePrefixes.bolt, Materials.WhiteDwarfMatter, 2),
+                GTOreDictUnificator.get(OrePrefixes.bolt, Materials.WhiteDwarfMatter, 8),
+                GTOreDictUnificator.get(OrePrefixes.bolt, Materials.WhiteDwarfMatter, 32),
+                GTOreDictUnificator.get(OrePrefixes.bolt, Materials.BlackDwarfMatter, 2),
+                GTOreDictUnificator.get(OrePrefixes.bolt, Materials.BlackDwarfMatter, 8),
+                GTOreDictUnificator.get(OrePrefixes.bolt, Materials.BlackDwarfMatter, 32),
                 GTOreDictUnificator
-                    .get(OrePrefixes.bolt, MaterialsUEVplus.MagnetohydrodynamicallyConstrainedStarMatter, 2),
+                    .get(OrePrefixes.bolt, Materials.MagnetohydrodynamicallyConstrainedStarMatter, 2),
                 GTOreDictUnificator
-                    .get(OrePrefixes.bolt, MaterialsUEVplus.MagnetohydrodynamicallyConstrainedStarMatter, 8) };
+                    .get(OrePrefixes.bolt, Materials.MagnetohydrodynamicallyConstrainedStarMatter, 8) };
 
             final ItemStack[] boltList = new ItemStack[] {
                 // Dense Shirabon plate.
                 GTOreDictUnificator.get("boltShirabon", 2),
-                GTOreDictUnificator.get(OrePrefixes.bolt, MaterialsUEVplus.WhiteDwarfMatter, 2),
-                GTOreDictUnificator.get(OrePrefixes.bolt, MaterialsUEVplus.WhiteDwarfMatter, 8),
-                GTOreDictUnificator.get(OrePrefixes.bolt, MaterialsUEVplus.WhiteDwarfMatter, 32),
-                GTOreDictUnificator.get(OrePrefixes.bolt, MaterialsUEVplus.BlackDwarfMatter, 2),
-                GTOreDictUnificator.get(OrePrefixes.bolt, MaterialsUEVplus.BlackDwarfMatter, 8),
-                GTOreDictUnificator.get(OrePrefixes.bolt, MaterialsUEVplus.BlackDwarfMatter, 32),
+                GTOreDictUnificator.get(OrePrefixes.bolt, Materials.WhiteDwarfMatter, 2),
+                GTOreDictUnificator.get(OrePrefixes.bolt, Materials.WhiteDwarfMatter, 8),
+                GTOreDictUnificator.get(OrePrefixes.bolt, Materials.WhiteDwarfMatter, 32),
+                GTOreDictUnificator.get(OrePrefixes.bolt, Materials.BlackDwarfMatter, 2),
+                GTOreDictUnificator.get(OrePrefixes.bolt, Materials.BlackDwarfMatter, 8),
+                GTOreDictUnificator.get(OrePrefixes.bolt, Materials.BlackDwarfMatter, 32),
                 GTOreDictUnificator
-                    .get(OrePrefixes.bolt, MaterialsUEVplus.MagnetohydrodynamicallyConstrainedStarMatter, 2),
+                    .get(OrePrefixes.bolt, Materials.MagnetohydrodynamicallyConstrainedStarMatter, 2),
                 GTOreDictUnificator
-                    .get(OrePrefixes.bolt, MaterialsUEVplus.MagnetohydrodynamicallyConstrainedStarMatter, 8) };
+                    .get(OrePrefixes.bolt, Materials.MagnetohydrodynamicallyConstrainedStarMatter, 8) };
             // spacetime 1
             GTValues.RA.stdBuilder()
                 .itemInputs(
@@ -1274,8 +1274,8 @@ public class AssemblyLineWithoutResearchRecipePool {
                     GTOreDictUnificator.get(OrePrefixes.circuit, Materials.UXV, 1))
                 .fluidInputs(
                     MUTATED_LIVING_SOLDER.getFluidStack(144 * 20),
-                    MaterialsUEVplus.Space.getMolten(144 * 10),
-                    MaterialsUEVplus.SpaceTime.getMolten(144 * 10))
+                    Materials.Space.getMolten(144 * 10),
+                    Materials.SpaceTime.getMolten(144 * 10))
                 .itemOutputs(SpacetimeCompressionFieldGeneratorTier0.get(1))
                 .eut(RECIPE_UMV)
                 .duration(20 * 4000)
@@ -1293,12 +1293,12 @@ public class AssemblyLineWithoutResearchRecipePool {
 
                     GregtechItemList.CosmicFabricManipulator.get(2),
                     GTUtility.copyAmountUnsafe(2, ME_Singularity),
-                    GTOreDictUnificator.get(OrePrefixes.bolt, MaterialsUEVplus.WhiteDwarfMatter, 2),
+                    GTOreDictUnificator.get(OrePrefixes.bolt, Materials.WhiteDwarfMatter, 2),
                     GTOreDictUnificator.get(OrePrefixes.circuit, Materials.UXV, 1))
                 .fluidInputs(
                     MUTATED_LIVING_SOLDER.getFluidStack(144 * 40),
-                    MaterialsUEVplus.Space.getMolten(144 * 20),
-                    MaterialsUEVplus.SpaceTime.getMolten(144 * 10))
+                    Materials.Space.getMolten(144 * 20),
+                    Materials.SpaceTime.getMolten(144 * 10))
                 .itemOutputs(SpacetimeCompressionFieldGeneratorTier1.get(1))
                 .eut(RECIPE_UMV)
                 .duration(20 * 4000 * 2)
@@ -1316,12 +1316,12 @@ public class AssemblyLineWithoutResearchRecipePool {
 
                     GregtechItemList.CosmicFabricManipulator.get(3),
                     GTUtility.copyAmountUnsafe(3, ME_Singularity),
-                    GTOreDictUnificator.get(OrePrefixes.bolt, MaterialsUEVplus.WhiteDwarfMatter, 8),
+                    GTOreDictUnificator.get(OrePrefixes.bolt, Materials.WhiteDwarfMatter, 8),
                     GTOreDictUnificator.get(OrePrefixes.circuit, Materials.UXV, 1))
                 .fluidInputs(
                     MUTATED_LIVING_SOLDER.getFluidStack(144 * 80),
-                    MaterialsUEVplus.Space.getMolten(144 * 30),
-                    MaterialsUEVplus.SpaceTime.getMolten(144 * 10))
+                    Materials.Space.getMolten(144 * 30),
+                    Materials.SpaceTime.getMolten(144 * 10))
                 .itemOutputs(SpacetimeCompressionFieldGeneratorTier2.get(1))
                 .eut(RECIPE_UMV)
                 .duration(20 * 4000 * 3)
@@ -1339,12 +1339,12 @@ public class AssemblyLineWithoutResearchRecipePool {
 
                     GregtechItemList.InfinityInfusedManipulator.get(1),
                     GTUtility.copyAmountUnsafe(4, ME_Singularity),
-                    GTOreDictUnificator.get(OrePrefixes.bolt, MaterialsUEVplus.WhiteDwarfMatter, 32),
+                    GTOreDictUnificator.get(OrePrefixes.bolt, Materials.WhiteDwarfMatter, 32),
                     GTOreDictUnificator.get(OrePrefixes.circuit, Materials.UXV, 2))
                 .fluidInputs(
                     MUTATED_LIVING_SOLDER.getFluidStack(144 * 160),
-                    MaterialsUEVplus.Space.getMolten(144 * 40),
-                    MaterialsUEVplus.SpaceTime.getMolten(144 * 10))
+                    Materials.Space.getMolten(144 * 40),
+                    Materials.SpaceTime.getMolten(144 * 10))
                 .itemOutputs(SpacetimeCompressionFieldGeneratorTier3.get(1))
                 .eut(RECIPE_UMV)
                 .duration(20 * 4000 * 4)
@@ -1362,12 +1362,12 @@ public class AssemblyLineWithoutResearchRecipePool {
 
                     GregtechItemList.InfinityInfusedManipulator.get(2),
                     GTUtility.copyAmountUnsafe(5, ME_Singularity),
-                    GTOreDictUnificator.get(OrePrefixes.bolt, MaterialsUEVplus.BlackDwarfMatter, 2),
+                    GTOreDictUnificator.get(OrePrefixes.bolt, Materials.BlackDwarfMatter, 2),
                     GTOreDictUnificator.get(OrePrefixes.circuit, Materials.UXV, 2))
                 .fluidInputs(
                     MUTATED_LIVING_SOLDER.getFluidStack(144 * 320),
-                    MaterialsUEVplus.Space.getMolten(144 * 50),
-                    MaterialsUEVplus.SpaceTime.getMolten(144 * 10))
+                    Materials.Space.getMolten(144 * 50),
+                    Materials.SpaceTime.getMolten(144 * 10))
                 .itemOutputs(SpacetimeCompressionFieldGeneratorTier4.get(1))
                 .eut(RECIPE_UMV)
                 .duration(20 * 4000 * 5)
@@ -1385,12 +1385,12 @@ public class AssemblyLineWithoutResearchRecipePool {
 
                     GregtechItemList.InfinityInfusedManipulator.get(3),
                     GTUtility.copyAmountUnsafe(6, ME_Singularity),
-                    GTOreDictUnificator.get(OrePrefixes.bolt, MaterialsUEVplus.BlackDwarfMatter, 8),
+                    GTOreDictUnificator.get(OrePrefixes.bolt, Materials.BlackDwarfMatter, 8),
                     GTOreDictUnificator.get(OrePrefixes.circuit, Materials.UXV, 2))
                 .fluidInputs(
                     MUTATED_LIVING_SOLDER.getFluidStack(144 * 640),
-                    MaterialsUEVplus.Space.getMolten(144 * 60),
-                    MaterialsUEVplus.SpaceTime.getMolten(144 * 10))
+                    Materials.Space.getMolten(144 * 60),
+                    Materials.SpaceTime.getMolten(144 * 10))
                 .itemOutputs(SpacetimeCompressionFieldGeneratorTier5.get(1))
                 .eut(RECIPE_UMV)
                 .duration(20 * 4000 * 6)
@@ -1408,12 +1408,12 @@ public class AssemblyLineWithoutResearchRecipePool {
 
                     GregtechItemList.SpaceTimeContinuumRipper.get(1),
                     GTUtility.copyAmountUnsafe(7, ME_Singularity),
-                    GTOreDictUnificator.get(OrePrefixes.bolt, MaterialsUEVplus.BlackDwarfMatter, 32),
+                    GTOreDictUnificator.get(OrePrefixes.bolt, Materials.BlackDwarfMatter, 32),
                     GTOreDictUnificator.get(OrePrefixes.circuit, Materials.UXV, 3))
                 .fluidInputs(
                     MUTATED_LIVING_SOLDER.getFluidStack(144 * 1280),
-                    MaterialsUEVplus.Space.getMolten(144 * 70),
-                    MaterialsUEVplus.SpaceTime.getMolten(144 * 10))
+                    Materials.Space.getMolten(144 * 70),
+                    Materials.SpaceTime.getMolten(144 * 10))
                 .itemOutputs(SpacetimeCompressionFieldGeneratorTier6.get(1))
                 .eut(RECIPE_UMV)
                 .duration(20 * 4000 * 7)
@@ -1432,12 +1432,12 @@ public class AssemblyLineWithoutResearchRecipePool {
                     GregtechItemList.SpaceTimeContinuumRipper.get(2),
                     GTUtility.copyAmountUnsafe(8, ME_Singularity),
                     GTOreDictUnificator
-                        .get(OrePrefixes.bolt, MaterialsUEVplus.MagnetohydrodynamicallyConstrainedStarMatter, 2),
+                        .get(OrePrefixes.bolt, Materials.MagnetohydrodynamicallyConstrainedStarMatter, 2),
                     GTOreDictUnificator.get(OrePrefixes.circuit, Materials.UXV, 3))
                 .fluidInputs(
                     MUTATED_LIVING_SOLDER.getFluidStack(144 * 2560),
-                    MaterialsUEVplus.Space.getMolten(144 * 80),
-                    MaterialsUEVplus.SpaceTime.getMolten(144 * 10))
+                    Materials.Space.getMolten(144 * 80),
+                    Materials.SpaceTime.getMolten(144 * 10))
                 .itemOutputs(SpacetimeCompressionFieldGeneratorTier7.get(1))
                 .eut(RECIPE_UMV)
                 .duration(20 * 4000 * 8)
@@ -1456,12 +1456,12 @@ public class AssemblyLineWithoutResearchRecipePool {
                     GregtechItemList.SpaceTimeContinuumRipper.get(3),
                     GTUtility.copyAmountUnsafe(9, ME_Singularity),
                     GTOreDictUnificator
-                        .get(OrePrefixes.bolt, MaterialsUEVplus.MagnetohydrodynamicallyConstrainedStarMatter, 8),
+                        .get(OrePrefixes.bolt, Materials.MagnetohydrodynamicallyConstrainedStarMatter, 8),
                     GTOreDictUnificator.get(OrePrefixes.circuit, Materials.UXV, 3))
                 .fluidInputs(
                     MUTATED_LIVING_SOLDER.getFluidStack(144 * 5120),
-                    MaterialsUEVplus.Space.getMolten(144 * 90),
-                    MaterialsUEVplus.SpaceTime.getMolten(144 * 10))
+                    Materials.Space.getMolten(144 * 90),
+                    Materials.SpaceTime.getMolten(144 * 10))
                 .itemOutputs(SpacetimeCompressionFieldGeneratorTier8.get(1))
                 .eut(RECIPE_UMV)
                 .duration(20 * 4000 * 9)
@@ -1567,8 +1567,8 @@ public class AssemblyLineWithoutResearchRecipePool {
                         )
                         .fluidInputs(
                             MUTATED_LIVING_SOLDER.getFluidStack((int) (2_880 * pow(2, absoluteTier))),
-                            MaterialsUEVplus.Time.getMolten(1_440 * (absoluteTier + 1)),
-                            MaterialsUEVplus.SpaceTime.getMolten(144 * 10))
+                            Materials.Time.getMolten(1_440 * (absoluteTier + 1)),
+                            Materials.SpaceTime.getMolten(144 * 10))
                         .itemOutputs(researchStuff[absoluteTier + 1])
                         .eut(RECIPE_UMV)
                         .duration((absoluteTier + 1) * 4_000 * 20)
@@ -1653,14 +1653,14 @@ public class AssemblyLineWithoutResearchRecipePool {
 
                             boltList[absoluteTier],
                             GTOreDictUnificator.get(OrePrefixes.circuit, Materials.UXV, 2 * (absoluteTier + 1)),
-                            GTOreDictUnificator.get(OrePrefixes.gearGt, MaterialsUEVplus.SpaceTime, absoluteTier + 1),
+                            GTOreDictUnificator.get(OrePrefixes.gearGt, Materials.SpaceTime, absoluteTier + 1),
                             GTOreDictUnificator
-                                .get(OrePrefixes.gearGtSmall, MaterialsUEVplus.SpaceTime, absoluteTier + 1))
+                                .get(OrePrefixes.gearGtSmall, Materials.SpaceTime, absoluteTier + 1))
                         .fluidInputs(
                             MUTATED_LIVING_SOLDER.getFluidStack((int) (2_880 * pow(2, absoluteTier))),
-                            MaterialsUEVplus.Time.getMolten(1_440 * (absoluteTier + 1)),
-                            MaterialsUEVplus.Space.getMolten(1_440 * (absoluteTier + 1)),
-                            MaterialsUEVplus.SpaceTime.getMolten(144 * 10))
+                            Materials.Time.getMolten(1_440 * (absoluteTier + 1)),
+                            Materials.Space.getMolten(1_440 * (absoluteTier + 1)),
+                            Materials.SpaceTime.getMolten(144 * 10))
                         .itemOutputs(researchStuff[absoluteTier + 1])
                         .eut(RECIPE_UMV)
                         .duration((absoluteTier + 1) * 4_000 * 20)

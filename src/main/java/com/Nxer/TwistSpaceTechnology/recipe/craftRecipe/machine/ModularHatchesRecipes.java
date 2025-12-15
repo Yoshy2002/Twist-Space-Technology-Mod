@@ -27,7 +27,6 @@ import goodgenerator.util.ItemRefer;
 import gregtech.api.enums.GTValues;
 import gregtech.api.enums.ItemList;
 import gregtech.api.enums.Materials;
-import gregtech.api.enums.Materials;
 import gregtech.api.enums.OrePrefixes;
 import gregtech.api.util.GTOreDictUnificator;
 import gregtech.api.util.GTUtility;
@@ -45,9 +44,8 @@ public class ModularHatchesRecipes {
         if (!Config.EnableModularizedMachineSystem) return;
 
         Materials[] materials = new Materials[] { Materials.NaquadahAlloy, Materials.Neutronium,
-            Materials.CosmicNeutronium, Materials.Infinity, Materials.TranscendentMetal,
-            Materials.SpaceTime, Materials.MHDCSM,
-            Materials.MagMatter };
+            Materials.CosmicNeutronium, Materials.Infinity, Materials.TranscendentMetal, Materials.SpaceTime,
+            Materials.MHDCSM, Materials.MagMatter };
 
         ItemStack[] hulls = new ItemStack[] { ItemList.Hull_ZPM.get(1), ItemList.Hull_UV.get(1),
             ItemList.Hull_MAX.get(1), ItemList.Hull_UEV.get(1), ItemList.Hull_UIV.get(1), ItemList.Hull_UMV.get(1),
@@ -257,9 +255,8 @@ public class ModularHatchesRecipes {
                     GTCMItemList.ProofOfHeroes.get(1),
                     GTUtility.copyAmountUnsafe(2048, GTCMItemList.PerfectOverclockController.get(1)),
                     GTUtility.copyAmountUnsafe(4096, ItemList.Field_Generator_UXV.get(1)),
-                    GTUtility.copyAmountUnsafe(
-                        6144,
-                        GTOreDictUnificator.get(OrePrefixes.itemCasing, Materials.Eternity, 1)),
+                    GTUtility
+                        .copyAmountUnsafe(6144, GTOreDictUnificator.get(OrePrefixes.itemCasing, Materials.Eternity, 1)),
 
                     GTUtility.copyAmountUnsafe(8192, Materials.Universium.getNanite(1)),
                     GTUtility.copyAmountUnsafe(8192, Materials.Eternity.getNanite(1)),

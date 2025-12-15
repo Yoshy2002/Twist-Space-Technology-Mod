@@ -30,7 +30,6 @@ import com.Nxer.TwistSpaceTechnology.config.Config;
 
 import gregtech.api.enums.ItemList;
 import gregtech.api.enums.Materials;
-import gregtech.api.enums.Materials;
 import gregtech.api.enums.Mods;
 import gregtech.api.enums.OrePrefixes;
 import gregtech.api.util.GTModHandler;
@@ -127,24 +126,20 @@ public class TCRecipePool {
 
                     GTModHandler.getModItem(Mods.Botania.ID, "manaResource", 1, 5),
                     new ItemStack[] { Industrial_TreeFarm.get(1),
-                        GTOreDictUnificator.get(OrePrefixes.circuit.get(Materials.UHV), 1),
-                        TITANSTEEL.getPlateDense(1),
+                        GTOreDictUnificator.get(OrePrefixes.circuit.get(Materials.UHV), 1), TITANSTEEL.getPlateDense(1),
                         GTOreDictUnificator.get(OrePrefixes.circuit.get(Materials.UHV), 1),
 
                         Industrial_FishingPond.get(1),
-                        GTOreDictUnificator.get(OrePrefixes.circuit.get(Materials.UHV), 1),
-                        TITANSTEEL.getPlateDense(1),
+                        GTOreDictUnificator.get(OrePrefixes.circuit.get(Materials.UHV), 1), TITANSTEEL.getPlateDense(1),
                         GTOreDictUnificator.get(OrePrefixes.circuit.get(Materials.UHV), 1),
 
                         ExtremeIndustrialGreenhouse.get(1),
-                        GTOreDictUnificator.get(OrePrefixes.circuit.get(Materials.UHV), 1),
-                        TITANSTEEL.getPlateDense(1),
+                        GTOreDictUnificator.get(OrePrefixes.circuit.get(Materials.UHV), 1), TITANSTEEL.getPlateDense(1),
                         GTOreDictUnificator.get(OrePrefixes.circuit.get(Materials.UHV), 1),
 
                         (Mods.EnderIO.isModLoaded() && Mods.MobsInfo.isModLoaded()) ? ExtremeEntityCrusher.get(1)
                             : new ItemStack(diamond_sword, 1),
-                        GTOreDictUnificator.get(OrePrefixes.circuit.get(Materials.UHV), 1),
-                        TITANSTEEL.getPlateDense(1),
+                        GTOreDictUnificator.get(OrePrefixes.circuit.get(Materials.UHV), 1), TITANSTEEL.getPlateDense(1),
                         GTOreDictUnificator.get(OrePrefixes.circuit.get(Materials.UHV), 1) });
 
                 infusionRecipeFontOfEcology = ThaumcraftApi.addInfusionCraftingRecipe(

@@ -10,7 +10,6 @@ import com.Nxer.TwistSpaceTechnology.common.recipeMap.GTCMRecipe;
 
 import gregtech.api.enums.GTValues;
 import gregtech.api.enums.Materials;
-import gregtech.api.enums.Materials;
 import gregtech.api.interfaces.IRecipeMap;
 import gregtech.api.util.GTUtility;
 import vazkii.botania.common.item.ModItems;

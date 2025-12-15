@@ -11,7 +11,6 @@ import net.minecraftforge.fluids.FluidStack;
 import goodgenerator.items.GGMaterial;
 import gregtech.api.enums.GTValues;
 import gregtech.api.enums.Materials;
-import gregtech.api.enums.Materials;
 import gregtech.api.enums.OrePrefixes;
 import gregtech.api.enums.TierEU;
 import gregtech.api.metatileentity.implementations.MTECable;

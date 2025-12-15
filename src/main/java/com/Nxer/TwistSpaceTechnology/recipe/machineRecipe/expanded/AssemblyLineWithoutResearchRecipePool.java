@@ -70,7 +70,6 @@ import goodgenerator.util.ItemRefer;
 import gregtech.api.enums.GTValues;
 import gregtech.api.enums.ItemList;
 import gregtech.api.enums.Materials;
-import gregtech.api.enums.Materials;
 import gregtech.api.enums.OrePrefixes;
 import gregtech.api.enums.TierEU;
 import gregtech.api.objects.ItemData;
@@ -1100,10 +1099,7 @@ public class AssemblyLineWithoutResearchRecipePool {
             GTValues.RA.stdBuilder()
                 .itemInputs(
                     ItemList.Hull_LuV.get(1),
-                    GTOreDictUnificator.get(
-                        OrePrefixes.spring,
-                        Materials.SuperconductorLuVBase,
-                        2),
+                    GTOreDictUnificator.get(OrePrefixes.spring, Materials.SuperconductorLuVBase, 2),
                     ItemList.Circuit_Chip_UHPIC.get(2),
                     new Object[] { OrePrefixes.circuit.get(Materials.LuV), 2 },
                     ItemList.LuV_Coil.get(2),
@@ -1240,10 +1236,8 @@ public class AssemblyLineWithoutResearchRecipePool {
                 GTOreDictUnificator.get(OrePrefixes.bolt, Materials.BlackDwarfMatter, 2),
                 GTOreDictUnificator.get(OrePrefixes.bolt, Materials.BlackDwarfMatter, 8),
                 GTOreDictUnificator.get(OrePrefixes.bolt, Materials.BlackDwarfMatter, 32),
-                GTOreDictUnificator
-                    .get(OrePrefixes.bolt, Materials.MHDCSM, 2),
-                GTOreDictUnificator
-                    .get(OrePrefixes.bolt, Materials.MHDCSM, 8) };
+                GTOreDictUnificator.get(OrePrefixes.bolt, Materials.MHDCSM, 2),
+                GTOreDictUnificator.get(OrePrefixes.bolt, Materials.MHDCSM, 8) };
 
             final ItemStack[] boltList = new ItemStack[] {
                 // Dense Shirabon plate.
@@ -1254,10 +1248,8 @@ public class AssemblyLineWithoutResearchRecipePool {
                 GTOreDictUnificator.get(OrePrefixes.bolt, Materials.BlackDwarfMatter, 2),
                 GTOreDictUnificator.get(OrePrefixes.bolt, Materials.BlackDwarfMatter, 8),
                 GTOreDictUnificator.get(OrePrefixes.bolt, Materials.BlackDwarfMatter, 32),
-                GTOreDictUnificator
-                    .get(OrePrefixes.bolt, Materials.MHDCSM, 2),
-                GTOreDictUnificator
-                    .get(OrePrefixes.bolt, Materials.MHDCSM, 8) };
+                GTOreDictUnificator.get(OrePrefixes.bolt, Materials.MHDCSM, 2),
+                GTOreDictUnificator.get(OrePrefixes.bolt, Materials.MHDCSM, 8) };
             // spacetime 1
             GTValues.RA.stdBuilder()
                 .itemInputs(
@@ -1431,8 +1423,7 @@ public class AssemblyLineWithoutResearchRecipePool {
 
                     GregtechItemList.SpaceTimeContinuumRipper.get(2),
                     GTUtility.copyAmountUnsafe(8, ME_Singularity),
-                    GTOreDictUnificator
-                        .get(OrePrefixes.bolt, Materials.MHDCSM, 2),
+                    GTOreDictUnificator.get(OrePrefixes.bolt, Materials.MHDCSM, 2),
                     GTOreDictUnificator.get(OrePrefixes.circuit, Materials.UXV, 3))
                 .fluidInputs(
                     MUTATED_LIVING_SOLDER.getFluidStack(144 * 2560),
@@ -1455,8 +1446,7 @@ public class AssemblyLineWithoutResearchRecipePool {
 
                     GregtechItemList.SpaceTimeContinuumRipper.get(3),
                     GTUtility.copyAmountUnsafe(9, ME_Singularity),
-                    GTOreDictUnificator
-                        .get(OrePrefixes.bolt, Materials.MHDCSM, 8),
+                    GTOreDictUnificator.get(OrePrefixes.bolt, Materials.MHDCSM, 8),
                     GTOreDictUnificator.get(OrePrefixes.circuit, Materials.UXV, 3))
                 .fluidInputs(
                     MUTATED_LIVING_SOLDER.getFluidStack(144 * 5120),
@@ -1640,10 +1630,8 @@ public class AssemblyLineWithoutResearchRecipePool {
                                 .get(OrePrefixes.frameGt, Materials.SuperconductorUIVBase, 4 * (absoluteTier + 1)),
                             GTOreDictUnificator
                                 .get(OrePrefixes.frameGt, Materials.SuperconductorUEVBase, 4 * (absoluteTier + 1)),
-                            GTOreDictUnificator.get(
-                                OrePrefixes.frameGt,
-                                Materials.SuperconductorUHVBase,
-                                4 * (absoluteTier + 1)),
+                            GTOreDictUnificator
+                                .get(OrePrefixes.frameGt, Materials.SuperconductorUHVBase, 4 * (absoluteTier + 1)),
 
                             // Gravitation Engine
                             getModItem(GraviSuite.ID, "itemSimpleItem", 64, 3),
@@ -1654,8 +1642,7 @@ public class AssemblyLineWithoutResearchRecipePool {
                             boltList[absoluteTier],
                             GTOreDictUnificator.get(OrePrefixes.circuit, Materials.UXV, 2 * (absoluteTier + 1)),
                             GTOreDictUnificator.get(OrePrefixes.gearGt, Materials.SpaceTime, absoluteTier + 1),
-                            GTOreDictUnificator
-                                .get(OrePrefixes.gearGtSmall, Materials.SpaceTime, absoluteTier + 1))
+                            GTOreDictUnificator.get(OrePrefixes.gearGtSmall, Materials.SpaceTime, absoluteTier + 1))
                         .fluidInputs(
                             MUTATED_LIVING_SOLDER.getFluidStack((int) (2_880 * pow(2, absoluteTier))),
                             Materials.Time.getMolten(1_440 * (absoluteTier + 1)),

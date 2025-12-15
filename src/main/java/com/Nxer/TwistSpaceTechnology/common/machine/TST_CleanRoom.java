@@ -17,8 +17,6 @@ import java.util.Set;
 
 import javax.annotation.Nonnull;
 
-import gregtech.api.util.GTDataUtils;
-import gregtech.api.util.GTUtility;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
@@ -46,7 +44,9 @@ import gregtech.api.metatileentity.implementations.MTEBasicHull;
 import gregtech.api.recipe.check.CheckRecipeResult;
 import gregtech.api.recipe.check.SimpleCheckRecipeResult;
 import gregtech.api.render.TextureFactory;
+import gregtech.api.util.GTDataUtils;
 import gregtech.api.util.GTLog;
+import gregtech.api.util.GTUtility;
 import gregtech.api.util.MultiblockTooltipBuilder;
 import tectech.thing.metaTileEntity.multi.base.TTMultiblockBase;
 

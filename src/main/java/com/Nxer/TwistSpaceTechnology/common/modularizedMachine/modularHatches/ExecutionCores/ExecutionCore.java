@@ -1,7 +1,8 @@
 package com.Nxer.TwistSpaceTechnology.common.modularizedMachine.modularHatches.ExecutionCores;
 
-import gregtech.api.interfaces.IOutputBus;
-import gregtech.api.util.GTUtility;
+import java.util.Collections;
+import java.util.List;
+
 import net.minecraft.client.renderer.texture.IIconRegister;
 
 import com.Nxer.TwistSpaceTechnology.util.TextEnums;
@@ -9,13 +10,12 @@ import com.Nxer.TwistSpaceTechnology.util.TextEnums;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import gregtech.api.enums.Textures;
+import gregtech.api.interfaces.IOutputBus;
 import gregtech.api.interfaces.ITexture;
 import gregtech.api.interfaces.metatileentity.IMetaTileEntity;
 import gregtech.api.interfaces.tileentity.IGregTechTileEntity;
 import gregtech.api.render.TextureFactory;
-
-import java.util.Collections;
-import java.util.List;
+import gregtech.api.util.GTUtility;
 
 public class ExecutionCore extends ExecutionCoreBase {
 

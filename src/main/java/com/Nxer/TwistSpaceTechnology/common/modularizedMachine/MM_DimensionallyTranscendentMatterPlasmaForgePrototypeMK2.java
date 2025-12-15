@@ -84,8 +84,8 @@ public class MM_DimensionallyTranscendentMatterPlasmaForgePrototypeMK2
 
     // Valid fuels which the discount will get applied to.
     protected static final FluidStack[] valid_fuels = { Materials.ExcitedDTEC.getFluid(1L),
-        Materials.ExcitedDTRC.getFluid(1L), Materials.ExcitedDTPC.getFluid(1L),
-        Materials.ExcitedDTCC.getFluid(1L), Materials.ExcitedDTSC.getFluid(1L) };
+        Materials.ExcitedDTRC.getFluid(1L), Materials.ExcitedDTPC.getFluid(1L), Materials.ExcitedDTCC.getFluid(1L),
+        Materials.ExcitedDTSC.getFluid(1L) };
 
     // endregion
 

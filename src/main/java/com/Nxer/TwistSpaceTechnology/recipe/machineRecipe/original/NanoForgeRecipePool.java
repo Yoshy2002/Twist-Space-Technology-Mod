@@ -11,7 +11,6 @@ import com.dreammaster.gthandler.CustomItemList;
 import goodgenerator.util.ItemRefer;
 import gregtech.api.enums.GTValues;
 import gregtech.api.enums.Materials;
-import gregtech.api.enums.Materials;
 import gregtech.api.enums.OrePrefixes;
 import gregtech.api.util.GTOreDictUnificator;
 import gtPlusPlus.xmod.gregtech.api.enums.GregtechItemList;

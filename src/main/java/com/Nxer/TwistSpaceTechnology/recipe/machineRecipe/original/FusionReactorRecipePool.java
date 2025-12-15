@@ -10,7 +10,6 @@ import com.Nxer.TwistSpaceTechnology.common.material.MaterialsTST;
 
 import gregtech.api.enums.GTValues;
 import gregtech.api.enums.Materials;
-import gregtech.api.enums.Materials;
 import gregtech.api.enums.TierEU;
 import gregtech.api.recipe.RecipeMaps;
 import gtPlusPlus.core.material.MaterialsElements;

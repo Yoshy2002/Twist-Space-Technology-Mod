@@ -41,7 +41,6 @@ import goodgenerator.items.GGMaterial;
 import gregtech.api.enums.GTValues;
 import gregtech.api.enums.ItemList;
 import gregtech.api.enums.Materials;
-import gregtech.api.enums.Materials;
 import gregtech.api.enums.OrePrefixes;
 import gregtech.api.enums.TierEU;
 import gregtech.api.recipe.RecipeMaps;
@@ -225,9 +224,7 @@ public class CosmicProcessorCircuitRecipes {
                 GTOreDictUnificator.get(OrePrefixes.foil, Materials.TranscendentMetal, 2),
                 GGMaterial.metastableOganesson.get(OrePrefixes.foil, 4),
                 GTOreDictUnificator.get(OrePrefixes.foil, Materials.Infinity, 2))
-            .fluidInputs(
-                Materials.Time.getMolten(72),
-                Materials.DTR.getFluid(100))
+            .fluidInputs(Materials.Time.getMolten(72), Materials.DTR.getFluid(100))
             .itemOutputs(GTCMItemList.EnergyFluctuationSelfHarmonizer.get(1))
             .outputChances(9000)
             .eut(RECIPE_UMV)
@@ -241,9 +238,7 @@ public class CosmicProcessorCircuitRecipes {
                 GTOreDictUnificator.get(OrePrefixes.foil, Materials.TranscendentMetal, 2),
                 GGMaterial.metastableOganesson.get(OrePrefixes.foil, 4),
                 GTOreDictUnificator.get(OrePrefixes.foil, Materials.Infinity, 2))
-            .fluidInputs(
-                Materials.Time.getMolten(36),
-                Materials.DTR.getFluid(50))
+            .fluidInputs(Materials.Time.getMolten(36), Materials.DTR.getFluid(50))
             .itemOutputs(GTCMItemList.EnergyFluctuationSelfHarmonizer.get(1))
             .eut(RECIPE_UMV)
             .duration(20 * 120)
@@ -256,9 +251,7 @@ public class CosmicProcessorCircuitRecipes {
                 GTOreDictUnificator.get(OrePrefixes.foil, Materials.TranscendentMetal, 2),
                 GGMaterial.metastableOganesson.get(OrePrefixes.foil, 4),
                 GTOreDictUnificator.get(OrePrefixes.foil, Materials.Infinity, 2))
-            .fluidInputs(
-                Materials.Time.getMolten(36),
-                Materials.DTR.getFluid(50))
+            .fluidInputs(Materials.Time.getMolten(36), Materials.DTR.getFluid(50))
             .itemOutputs(
                 GTCMItemList.EnergyFluctuationSelfHarmonizer.get(2),
                 GTCMItemList.EnergyFluctuationSelfHarmonizer.get(1))
@@ -433,9 +426,7 @@ public class CosmicProcessorCircuitRecipes {
 
         // MicroSpaceTimeFabricatorio
         GTValues.RA.stdBuilder()
-            .metadata(
-                RESEARCH_ITEM,
-                GTOreDictUnificator.get(OrePrefixes.itemCasing, Materials.TranscendentMetal, 1))
+            .metadata(RESEARCH_ITEM, GTOreDictUnificator.get(OrePrefixes.itemCasing, Materials.TranscendentMetal, 1))
             .metadata(SCANNING, scanningLV(24 * HOURS))
             .itemInputs(
                 GTOreDictUnificator.get(OrePrefixes.frameGt, Materials.TranscendentMetal, 16),

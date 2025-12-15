@@ -7,8 +7,6 @@ import java.util.Collections;
 import java.util.List;
 import java.util.UUID;
 
-import gregtech.api.interfaces.IOutputBus;
-import gregtech.api.util.GTUtility;
 import net.minecraft.client.renderer.texture.IIconRegister;
 
 import com.Nxer.TwistSpaceTechnology.TwistSpaceTechnology;
@@ -18,10 +16,12 @@ import com.Nxer.TwistSpaceTechnology.util.TstUtils;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import gregtech.api.enums.Textures;
+import gregtech.api.interfaces.IOutputBus;
 import gregtech.api.interfaces.ITexture;
 import gregtech.api.interfaces.metatileentity.IMetaTileEntity;
 import gregtech.api.interfaces.tileentity.IGregTechTileEntity;
 import gregtech.api.render.TextureFactory;
+import gregtech.api.util.GTUtility;
 
 // TODO Wireless EU costings
 public class AdvExecutionCore extends ExecutionCoreBase {

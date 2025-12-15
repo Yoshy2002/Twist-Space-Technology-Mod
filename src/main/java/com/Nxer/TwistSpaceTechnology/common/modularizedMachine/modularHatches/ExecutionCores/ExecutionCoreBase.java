@@ -3,8 +3,6 @@ package com.Nxer.TwistSpaceTechnology.common.modularizedMachine.modularHatches.E
 import java.util.Collections;
 import java.util.List;
 
-import gregtech.api.util.GTDataUtils;
-import gregtech.api.util.GTUtility;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
@@ -20,7 +18,6 @@ import com.Nxer.TwistSpaceTechnology.common.modularizedMachine.modularHatches.IS
 import com.Nxer.TwistSpaceTechnology.common.modularizedMachine.modularHatches.ModularHatchBase;
 import com.Nxer.TwistSpaceTechnology.util.NBTUtils;
 import com.Nxer.TwistSpaceTechnology.util.TextEnums;
-import com.Nxer.TwistSpaceTechnology.util.TstUtils;
 
 import gregtech.api.enums.VoidingMode;
 import gregtech.api.interfaces.ITexture;

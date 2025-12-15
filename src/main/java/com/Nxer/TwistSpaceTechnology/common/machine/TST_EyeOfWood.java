@@ -24,7 +24,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.world.WorldProvider;
-import net.minecraft.world.gen.ChunkProviderServer;
 import net.minecraftforge.common.util.ForgeDirection;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidStack;
@@ -438,8 +437,7 @@ public class TST_EyeOfWood extends GTCM_MultiMachineBase<TST_EyeOfWood> {
     private void handleModDimDef(int id) {
         if (this.getBaseMetaTileEntity() == null) return;
         String dimName = (this.getBaseMetaTileEntity()
-            .getWorld()
-            .provider.getDimensionName());
+            .getWorld().provider.getDimensionName());
         if (VoidMinerUtility.dropMapsByDimName.containsKey(dimName)) {
             dropMap = VoidMinerUtility.dropMapsByDimName.get(dimName);
         }
@@ -453,8 +451,7 @@ public class TST_EyeOfWood extends GTCM_MultiMachineBase<TST_EyeOfWood> {
     private void handleExtraDrops(int id) {
         if (this.getBaseMetaTileEntity() == null) return;
         String dimName = (this.getBaseMetaTileEntity()
-            .getWorld()
-            .provider.getDimensionName());
+            .getWorld().provider.getDimensionName());
         if (VoidMinerUtility.extraDropsByDimName.containsKey(dimName)) {
             extraDropMap = VoidMinerUtility.extraDropsByDimName.get(dimName);
         }

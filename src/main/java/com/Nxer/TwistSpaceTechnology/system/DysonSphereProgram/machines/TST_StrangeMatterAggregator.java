@@ -66,7 +66,6 @@ import cpw.mods.fml.relauncher.SideOnly;
 import goodgenerator.items.GGMaterial;
 import gregtech.api.enums.ItemList;
 import gregtech.api.enums.Materials;
-import gregtech.api.enums.Materials;
 import gregtech.api.enums.Textures;
 import gregtech.api.gui.modularui.GTUITextures;
 import gregtech.api.interfaces.ITexture;

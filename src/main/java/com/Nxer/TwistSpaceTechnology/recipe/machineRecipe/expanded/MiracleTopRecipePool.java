@@ -43,7 +43,6 @@ import goodgenerator.items.GGMaterial;
 import gregtech.api.enums.GTValues;
 import gregtech.api.enums.ItemList;
 import gregtech.api.enums.Materials;
-import gregtech.api.enums.Materials;
 import gregtech.api.enums.Mods;
 import gregtech.api.enums.OrePrefixes;
 import gregtech.api.objects.ItemData;
@@ -253,7 +252,8 @@ public class MiracleTopRecipePool {
                             if (stackData != null) {
                                 Materials material = stackData.mMaterial.mMaterial;
 
-                                if (material == Materials.StyreneButadieneRubber || material == Materials.RubberSilicone) {
+                                if (material == Materials.StyreneButadieneRubber
+                                    || material == Materials.RubberSilicone) {
                                     if (usedMaterial == null) {
                                         usedMaterial = material;
                                     } else if (usedMaterial != material) {
@@ -366,8 +366,8 @@ public class MiracleTopRecipePool {
                     if (Material.getMolten(1) != null && targetModifyOreDict.contains(OreDict)) {
                         if (Material == Materials.TengamAttuned) Material = Materials.TengamPurified;
                         inputFluids.add(
-                            Material
-                                .getMolten(OreDict.getMaterialAmount() * GTValues.L * aStack.stackSize / GTValues.M * 16));
+                            Material.getMolten(
+                                OreDict.getMaterialAmount() * GTValues.L * aStack.stackSize / GTValues.M * 16));
                         isItemModified = true;
                     } else if (superConductorMaterialList.contains(Material) && OreDict != OrePrefixes.circuit) {
                         inputItems.add(

@@ -3,6 +3,8 @@ package com.Nxer.TwistSpaceTechnology.common.modularizedMachine.modularHatches.E
 import java.util.Collections;
 import java.util.List;
 
+import gregtech.api.util.GTDataUtils;
+import gregtech.api.util.GTUtility;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
@@ -368,14 +370,6 @@ public abstract class ExecutionCoreBase extends ModularHatchBase implements IExe
     public void setVoidingMode(VoidingMode mode) {}
 
     @Override
-    public List<ItemStack> getItemOutputSlots(ItemStack[] toOutput) {
-        if (mainMachine instanceof IVoidable m) {
-            return m.getItemOutputSlots(toOutput);
-        }
-        return Collections.emptyList();
-    }
-
-    @Override
     public List<? extends IFluidStore> getFluidOutputSlots(FluidStack[] toOutput) {
         if (mainMachine instanceof IVoidable m) {
             return m.getFluidOutputSlots(toOutput);
@@ -384,27 +378,11 @@ public abstract class ExecutionCoreBase extends ModularHatchBase implements IExe
     }
 
     @Override
-    public boolean canDumpItemToME() {
-        if (mainMachine instanceof IVoidable m) {
-            return m.canDumpItemToME();
-        }
-        return false;
-    }
-
-    @Override
     public boolean canDumpFluidToME() {
         if (mainMachine instanceof IVoidable m) {
             return m.canDumpFluidToME();
         }
         return false;
-    }
-
-    @Override
-    public List<ItemStack> getVoidOutputSlots() {
-        if (mainMachine instanceof IVoidable m) {
-            return m.getVoidOutputSlots();
-        }
-        return TstUtils.EMPTY_ITEMSTACK_LIST;
     }
 
     // endregion

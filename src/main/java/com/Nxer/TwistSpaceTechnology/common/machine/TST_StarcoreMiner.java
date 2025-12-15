@@ -372,18 +372,14 @@ public class TST_StarcoreMiner extends GTCM_MultiMachineBase<TST_StarcoreMiner> 
      * @param id the dim number
      */
     private void handleModDimDef(int id) {
-        if (VoidMinerUtility.dropMapsByDimId.containsKey(id)) {
-            this.dropMap = VoidMinerUtility.dropMapsByDimId.get(id);
-        } else {
-            String chunkProviderName = ((ChunkProviderServer) this.getBaseMetaTileEntity()
-                .getWorld()
-                .getChunkProvider()).currentChunkProvider.getClass()
-                    .getName();
-
-            if (VoidMinerUtility.dropMapsByChunkProviderName.containsKey(chunkProviderName)) {
-                this.dropMap = VoidMinerUtility.dropMapsByChunkProviderName.get(chunkProviderName);
-            }
+        if (this.getBaseMetaTileEntity() == null) return;
+        String dimName = (this.getBaseMetaTileEntity()
+            .getWorld()
+            .provider.getDimensionName());
+        if (VoidMinerUtility.dropMapsByDimName.containsKey(dimName)) {
+            this.dropMap = VoidMinerUtility.dropMapsByDimName.get(dimName);
         }
+
     }
 
     /**
@@ -392,8 +388,12 @@ public class TST_StarcoreMiner extends GTCM_MultiMachineBase<TST_StarcoreMiner> 
      * @param id the specified dim id
      */
     private void handleExtraDrops(int id) {
-        if (VoidMinerUtility.extraDropsDimMap.containsKey(id)) {
-            extraDropMap = VoidMinerUtility.extraDropsDimMap.get(id);
+        if (this.getBaseMetaTileEntity() == null) return;
+        String dimName = (this.getBaseMetaTileEntity()
+            .getWorld()
+            .provider.getDimensionName());
+        if (VoidMinerUtility.extraDropsByDimName.containsKey(dimName)) {
+            extraDropMap = VoidMinerUtility.extraDropsByDimName.get(dimName);
         }
     }
 

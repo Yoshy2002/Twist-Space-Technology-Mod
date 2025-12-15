@@ -3,8 +3,12 @@ package com.Nxer.TwistSpaceTechnology.common.modularizedMachine.modularHatches.E
 import static gregtech.common.misc.WirelessNetworkManager.addEUToGlobalEnergyMap;
 
 import java.math.BigInteger;
+import java.util.Collections;
+import java.util.List;
 import java.util.UUID;
 
+import gregtech.api.interfaces.IOutputBus;
+import gregtech.api.util.GTUtility;
 import net.minecraft.client.renderer.texture.IIconRegister;
 
 import com.Nxer.TwistSpaceTechnology.TwistSpaceTechnology;
@@ -21,6 +25,16 @@ import gregtech.api.render.TextureFactory;
 
 // TODO Wireless EU costings
 public class AdvExecutionCore extends ExecutionCoreBase {
+
+    @Override
+    public boolean canDumpItemToME(List<GTUtility.ItemId> outputs) {
+        return true;
+    }
+
+    @Override
+    public List<IOutputBus> getOutputBusses() {
+        return Collections.emptyList();
+    }
 
     public AdvExecutionCore(int aID, String aName, String aNameRegional, int aTier) {
         super(aID, aName, aNameRegional, aTier);

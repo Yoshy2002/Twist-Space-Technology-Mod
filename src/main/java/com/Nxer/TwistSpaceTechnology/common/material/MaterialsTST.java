@@ -23,6 +23,13 @@ public class MaterialsTST {
     // ID form 2242 ~ 2298 is available
 
     public static Materials NeutroniumAlloy = new Materials(
+        "Neutronium Alloy",
+    "NeutroniumAlloy",
+    null,
+        "Nt\u2087Du\u2082Fl҉?",
+
+
+    public static Materials neutroniumalloy = new Materials(
         offsetID,
         TextureSet.SET_SHINY,
         32.0F,

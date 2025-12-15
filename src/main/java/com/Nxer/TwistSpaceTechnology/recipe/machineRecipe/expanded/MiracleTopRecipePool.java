@@ -367,12 +367,12 @@ public class MiracleTopRecipePool {
                         if (Material == Materials.TengamAttuned) Material = Materials.TengamPurified;
                         inputFluids.add(
                             Material
-                                .getMolten(OreDict.mMaterialAmount * GTValues.L * aStack.stackSize / GTValues.M * 16));
+                                .getMolten(OreDict.getMaterialAmount() * GTValues.L * aStack.stackSize / GTValues.M * 16));
                         isItemModified = true;
                     } else if (superConductorMaterialList.contains(Material) && OreDict != OrePrefixes.circuit) {
                         inputItems.add(
                             copyAmountUnsafe(
-                                (int) (OreDict.mMaterialAmount * aStack.stackSize * 2 / GTValues.M),
+                                (int) (OreDict.getMaterialAmount() * aStack.stackSize * 2 / GTValues.M),
                                 GTOreDictUnificator.get(OrePrefixes.wireGt16, Material, 1)));
                         isItemModified = true;
                     }
@@ -661,9 +661,9 @@ public class MiracleTopRecipePool {
                 String orePrefixName = innerEntry.getKey();
                 ItemStack aStack = innerEntry.getValue();
 
-                OrePrefixes OreDict = OrePrefixes.valueOf(orePrefixName);
+                OrePrefixes OreDict = OrePrefixes.getPrefix(orePrefixName);
 
-                int amount = (int) (OreDict.mMaterialAmount * GTValues.L * aStack.stackSize / GTValues.M);
+                int amount = (int) (OreDict.getMaterialAmount() * GTValues.L * aStack.stackSize / GTValues.M);
                 FluidStack fluidStack = material.getFluidStack(amount);
 
                 if (fluidStack != null) {

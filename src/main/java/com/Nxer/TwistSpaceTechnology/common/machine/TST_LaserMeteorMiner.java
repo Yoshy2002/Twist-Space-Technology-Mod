@@ -6,6 +6,7 @@ import static com.Nxer.TwistSpaceTechnology.util.TextEnums.Author_Totto;
 import static com.Nxer.TwistSpaceTechnology.util.TextEnums.Mod_TwistSpaceTechnology;
 import static com.Nxer.TwistSpaceTechnology.util.TextEnums.tr;
 import static com.gtnewhorizon.structurelib.structure.StructureUtility.ofBlock;
+import com.gtnewhorizon.structurelib.alignment.enumerable.ExtendedFacing;
 import static com.gtnewhorizon.structurelib.structure.StructureUtility.transpose;
 import static gregtech.api.enums.HatchElement.*;
 import static gregtech.api.enums.TierEU.RECIPE_MV;
@@ -473,7 +474,8 @@ public class TST_LaserMeteorMiner extends MTEEnhancedMultiBlockBase<TST_LaserMet
                 getBaseMetaTileEntity().getYCoord() + (this.multiTier == 1 ? 10 : 15),
                 zStart) instanceof TileEntityLaserBeacon laser) {
             renderer = laser;
-            renderer.setRotationFields(getDirection(), getRotation(), getFlip());
+            ExtendedFacing f = getExtendedFacing();
+            renderer.setRotationFields(f);
             return true;
         }
         return false;

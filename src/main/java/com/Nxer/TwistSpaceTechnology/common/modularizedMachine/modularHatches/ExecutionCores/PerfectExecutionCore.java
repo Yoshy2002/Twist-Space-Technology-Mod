@@ -3,9 +3,11 @@ package com.Nxer.TwistSpaceTechnology.common.modularizedMachine.modularHatches.E
 import static gregtech.common.misc.WirelessNetworkManager.addEUToGlobalEnergyMap;
 
 import java.math.BigInteger;
+import java.util.Collections;
 import java.util.List;
 import java.util.UUID;
 
+import gregtech.api.interfaces.IOutputBus;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.ItemStack;
@@ -30,6 +32,16 @@ import mcp.mobius.waila.api.IWailaConfigHandler;
 import mcp.mobius.waila.api.IWailaDataAccessor;
 
 public class PerfectExecutionCore extends ExecutionCoreBase {
+
+    @Override
+    public boolean canDumpItemToME(List<GTUtility.ItemId> outputs) {
+        return true;
+    }
+
+    @Override
+    public List<IOutputBus> getOutputBusses() {
+        return Collections.emptyList();
+    }
 
     public PerfectExecutionCore(int aID, String aName, String aNameRegional, int aTier) {
         super(aID, aName, aNameRegional, aTier);

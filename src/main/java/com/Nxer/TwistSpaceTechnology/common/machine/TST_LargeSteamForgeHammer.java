@@ -32,6 +32,11 @@ import gregtech.api.util.MultiblockTooltipBuilder;
 public class TST_LargeSteamForgeHammer extends TST_SteamMultiMachineBase<TST_LargeSteamForgeHammer>
     implements ISurvivalConstructable {
 
+    @Override
+    public int getThemeTier() {
+        return -1;
+    }
+
     // region Class Constructor
     public TST_LargeSteamForgeHammer(int aID, String aName, String aNameRegional) {
         super(aID, aName, aNameRegional);

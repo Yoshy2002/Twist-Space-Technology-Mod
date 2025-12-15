@@ -35,6 +35,11 @@ import gregtech.api.util.MultiblockTooltipBuilder;
 public class TST_LargeSteamAlloySmelter extends TST_SteamMultiMachineBase<TST_LargeSteamAlloySmelter>
     implements ISurvivalConstructable {
 
+    @Override
+    public int getThemeTier() {
+        return -1;
+    }
+
     // region Class Constructor
     public TST_LargeSteamAlloySmelter(String aName) {
         super(aName);
